@@ -1,0 +1,12 @@
+# Visual Studio Code
+/.vscode/
+
+# NodeJS
+/node_modules/
+package-lock.json
+
+# ESLint
+/.eslintcache
+
+# Project
+/public/

@@ -1,0 +1,57 @@
+{
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "tsconfig.json",
+		"tsconfigRootDir": "."
+	},
+	"plugins": ["react", "react-hooks", "promise", "optimize-regex", "sonarjs", "@typescript-eslint"],
+	"settings": {
+		"react": {
+			"createClass": "createReactClass",
+			"pragma": "React",
+			"version": "detect"
+		}
+	},
+	"rules": {
+		"no-duplicate-imports": ["error", { "includeExports": true }],
+		"no-template-curly-in-string": "error",
+		"no-alert": "warn",
+		"no-console": "warn",
+		"no-else-return": ["error", { "allowElseIf": false }],
+
+		"block-scoped-var": "error",
+		"curly": ["error", "all"],
+		"eqeqeq": "error",
+		"max-classes-per-file": ["error", 1],
+
+		"@typescript-eslint/interface-name-prefix": ["error", { "prefixWithI": "always", "allowUnderscorePrefix": false }],
+
+		"promise/prefer-await-to-then": "error",
+		
+		"react/no-access-state-in-setstate": "error",
+		"react/no-danger": "error",
+		"react/no-multi-comp": "error",
+		"react/no-this-in-sfc": "error",
+		"react/prefer-stateless-function": "error",
+		"react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+		"react/jsx-no-bind": "error",
+		"react/jsx-no-literals": "warn",
+		"react/jsx-no-useless-fragment": "error",
+		"react/jsx-pascal-case": "error",
+
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn"
+	}
+}
