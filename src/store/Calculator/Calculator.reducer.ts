@@ -3,7 +3,7 @@ import { Actions } from "./Calculator.actions.type";
 import { initState, State } from "./Calculator.state";
 
 export const calculator = (state = initState, action: Actions): State => {
-	switch(action.type) {
+	switch(action) {
 		// case Keys.YOUR_KEY:
 		// 	return {...state};
 		default:
