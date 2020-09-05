@@ -1,12 +1,10 @@
-import logo from "./contents/icon.image.gif";
-
-import "./Home.style.css";
+import styles from "./Home.style.css";
 
 import React from "react";
+import { HomeProps } from "./Home";
 
-export const HomeView = (): JSX.Element => <div className="home_container">
-	<img className="home_container__image" src={logo} alt="" />
-	<div className="home_container__bonjour">
-		{"Добро пожаловать на основную страницу Web-клиента!!!"}
-	</div>
-</div>;
+export const HomeView: React.FC<HomeProps> = (props) => {
+	return (
+		<div className={styles.container}>{"Home"}</div>
+	);
+}

@@ -34,8 +34,24 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.css$/,
-				use: ["style-loader", "css-loader"]
+				test: /\.gstyle.css$/,
+				use: ["style-loader", "css-loader"],
+			},
+			{
+				test: /\.style.css$/,
+				use: [
+					"style-loader",
+					{
+						loader: "css-loader",
+						options: {
+							sourceMap: true,
+							localsConvention: "camelCase",
+							modules: {
+								localIdentName: "[folder]_[local]__[hash:base64:5]",
+							}
+						}
+					}
+				],
 			},
 			{
 				test: /\.(png|jpg|gif|svg|jpeg)$/,
