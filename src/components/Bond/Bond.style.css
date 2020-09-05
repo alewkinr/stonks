@@ -1,0 +1,32 @@
+.container {
+	display: flex;
+}
+
+.bond-row {
+	width: 480px;
+	height: 50px;
+	margin: auto;
+	background: #ffff;
+}
+
+.bond-text {
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: #C4C4C4;
+	line-height: 14px;
+}
+
+.title {
+	font-family: Roboto, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: #222222;
+	line-height: 14px;
+}
+
+.profit {
+	color: #50D866;
+}
