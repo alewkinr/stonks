@@ -45,3 +45,7 @@ store
 	│		└── [store-name].state.ts
 	└── index.ts
 ```
+
+## Для сборки и запуска проекта
+1. ```npm i```
+2. ```npm run dev```
