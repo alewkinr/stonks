@@ -1,10 +1,19 @@
 import styles from "./Calculator.style.css";
 
-import React from "react";
-import { CalculatorProps } from "./Calculator";
+import React, {Component} from "react";
+import {CalculatorProps} from "./Calculator";
 
-export const CalculatorView: React.FC<CalculatorProps> = (props) => {
-	return (
-		<div className={styles.container}>{"Calculator"}</div>
+export class CalculatorView extends Component<React.FC<CalculatorProps>> {
+
+	constructor(props) {
+		super(props);
+
+		let bonds = require('../../../../data/bonds.json');
+		props.initializeBonds(bonds)
+	}
+
+	render = () => (
+		<div className={styles.container}>{"Calculator"}
+		</div>
 	);
 }

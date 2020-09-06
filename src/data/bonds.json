@@ -1,0 +1,11 @@
+[
+  {
+    "instrumentId": "4B020102673B001P",
+    "issuer": "Тинькофф Банк-001P-01R",
+    "issuerImg": "any",
+    "maturityDate": "2022-04-22T12:00:00+03",
+    "notional": 1000,
+    "currency": "RUB",
+    "couponPercentage": 0.011
+  }
+]

@@ -1,7 +1,9 @@
+import {Bond} from "../../common/types";
+
 export type State = {
-	// add your properties
+	bonds: Array<Bond>
 };
 
 export const initState: State = {
-	// add your properties
+	bonds: []
 };
