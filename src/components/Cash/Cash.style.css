@@ -1,0 +1,20 @@
+.container {
+	display: flex;
+	align-items: center;
+}
+
+.value {
+	font-size: 18px;
+}
+
+.currency {
+	width: 14px;
+	height: 14px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 3px;
+}
+
+.currency.ruble {
+	background-image: url(./contents/ruble.svg);
+}
