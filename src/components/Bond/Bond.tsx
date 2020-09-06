@@ -1,16 +1,10 @@
 import React from "react"
 import { connect } from "react-redux"
 import { BondView } from "./Bond.view"
+import { Bond } from "../../common/types"
 
-type Bond = {
-    title: string
-    logoURL: URL
-    amount: number
-    expireDate: Date
-    interest: number
-}
 type BondState = {
-    bond: [Bond]
+    bond: Array<Bond>
 }
 
 type BondDispatch = {
@@ -24,7 +18,8 @@ const Bond: React.FC<BondProps> = (props) => {
 }
 
 const mapStateToProps = (/* your global app state type */): BondState => {
-    return { bond:  }
+    // todo: fix
+    return { bond: undefined }
 }
 
 const mapDispatchToProps: BondDispatch = {

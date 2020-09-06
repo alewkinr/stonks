@@ -6,20 +6,17 @@ import { BondProps } from "./Bond"
 export const BondView: React.FC<BondProps> = (props) => {
     return (
         <div className={styles.container}>
-            <div className={styles.bondRow}>
-                <img
-                    src="./components/Bond/images/tinkoff-bond.png"
-                    alt="Bond-title"
-                />
-                <span className={styles.bondText + " " + styles.title}>
-                    {props.title}
-                </span>
-                <span className={styles.bondText}>{props.amount}</span>
-                <span className={styles.bondText}>{props.expireDate}</span>
-                <span className={styles.bondText + " " + styles.profit}>
-                    {props.interest}
-                </span>
-            </div>
+            <span>
+                <div className={styles.bondLogo} style="background-image: url('"{this.props.issuerImg}"');"/>
+            </span>
+            <span className={styles.bondText + " " + styles.title}>
+                {this.props.title}
+            </span>
+            <span className={styles.bondText}>{this.props.issuer} шт.</span>
+            <span className={styles.bondText}>до {this.props.maturityDate}</span>
+            <span className={styles.bondText + " " + styles.profit}>
+                {this.props.couponPercentage}% годовых
+            </span>
         </div>
     )
 }

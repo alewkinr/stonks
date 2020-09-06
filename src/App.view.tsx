@@ -1,11 +1,12 @@
 import "./App.gstyle.css"
 
 import React from "react"
-import { TestingPage } from "./pages/TestingPage"
+import { Home } from "./pages/Home"
+import { Bond } from "./components/Bond"
 
 export const App = (): JSX.Element => (
     <div className="app">
-        {/* todo: remove*/}
-        <TestingPage />
+        <Home />
+        <Bond />
     </div>
 )
