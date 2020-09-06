@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {CalculatorView} from "./Calculator.view";
 import {Bond} from "../../../../common/types";
 import {AppState} from "../../../../store";
@@ -15,6 +15,16 @@ type CalculatorDispatch = {
 
 export type CalculatorProps = CalculatorState & CalculatorDispatch;
 
+const Calculator: React.FC<CalculatorProps> = (props) => {
+    useEffect(() => {
+        let bonds = require('../../../../data/bonds.json');
+        
+        props.initializeBonds(bonds.map(bond => Bond.deserialize(bond)));
+    }, []);
+
+    return <CalculatorView {...props} />
+}
+
 const mapStateToProps = (state: AppState): CalculatorState => {
     const {bonds} = state.calculator;
 
@@ -24,9 +34,5 @@ const mapStateToProps = (state: AppState): CalculatorState => {
 const mapDispatchToProps: CalculatorDispatch = {
     initializeBonds: initializeBonds,
 };
-
-const Calculator: React.FC<CalculatorProps> = (props) => {
-    return <CalculatorView {...props} />
-}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Calculator);
