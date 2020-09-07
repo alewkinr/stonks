@@ -1,10 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
 import { AccountView } from "./Account.view";
+import { setIsIndividualInvestmentAccount, setOriginAmount } from "../../../../../../store/Account/Account.actions";
+import { AppState } from "../../../../../../store";
 
-type AccountState = { /* your states */ };
+type AccountState = {
+	isIndividualInvestmentAccount: boolean;
+	originAmount: string;
+};
 
-type AccountDispatch = { /* your dispatchs */ };
+type AccountDispatch = {
+	setIsIndividualInvestmentAccount: typeof setIsIndividualInvestmentAccount;
+	setOriginAmount: typeof setOriginAmount;
+};
 
 export type AccountProps = AccountState & AccountDispatch;
 
@@ -12,12 +20,15 @@ const Account: React.FC<AccountProps> = (props) => {
 	return <AccountView {...props} />
 }
 
-const mapStateToProps = (/* your global app state type */): AccountState => {
-	return { /* your states */ };
+const mapStateToProps = (state: AppState): AccountState => {
+	const {isIndividualInvestmentAccount, originAmount} = state.account;
+
+	return {isIndividualInvestmentAccount, originAmount};
 }
 
 const mapDispatchToProps: AccountDispatch = {
-	// your dispatchs
+	setIsIndividualInvestmentAccount,
+	setOriginAmount,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Account);
