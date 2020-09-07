@@ -6,6 +6,7 @@ import { Toggle } from "../../../../../../components/Toggle";
 import { InputScrollableRange } from "../../../../../../components/InputScrollableRange";
 import { Cash } from "../../../../../../components/Cash";
 import { Label } from "../../../../../../components/Label";
+import { convertToFormat } from "./handlers/ConvertToFormat";
 
 export const AccountView: React.FC<AccountProps> = (props) => {
 	const {isIndividualInvestmentAccount, originAmount} = props;
@@ -23,9 +24,7 @@ export const AccountView: React.FC<AccountProps> = (props) => {
 			<InputScrollableRange value={originAmount}
 				onChange={e => {
 					let value = e.currentTarget.value;
-					value = value.replace(/\s/gm, "");
-					const format = new Intl.NumberFormat("ru").format(Number.parseInt(value));
-					value = format === "не число" ? "" : format;
+					value = convertToFormat(value);
 					setOriginAmount(value)
 				}} />
 			<div className={styles.information}>
