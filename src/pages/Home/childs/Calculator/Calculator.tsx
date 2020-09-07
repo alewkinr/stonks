@@ -6,7 +6,7 @@ import {initializeBonds} from "../../../../store/Calculator/Calculator.actions";
 import {connect} from "react-redux";
 
 type CalculatorState = {
-    bonds: Array<Bond>
+    bonds: { [instrumentId: string]: Bond }
 };
 
 type CalculatorDispatch = {
@@ -18,8 +18,13 @@ export type CalculatorProps = CalculatorState & CalculatorDispatch;
 const Calculator: React.FC<CalculatorProps> = (props) => {
     useEffect(() => {
         let bonds = require('../../../../data/bonds.json');
-        
-        props.initializeBonds(bonds.map(bond => Bond.deserialize(bond)));
+        props.initializeBonds(bonds
+            .map(bond => Bond.deserialize(bond))
+            .reduce(function (map: { [instrumentId: string]: Bond }, bond: Bond) {
+                console.log(bond.instrumentId);
+                map[bond.instrumentId] = bond;
+                return map;
+            }, {}));
     }, []);
 
     return <CalculatorView {...props} />

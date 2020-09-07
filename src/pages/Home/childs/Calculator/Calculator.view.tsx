@@ -12,7 +12,7 @@ export const CalculatorView: React.FC<CalculatorProps> = (props) => {
 			<div className={styles.account}>
 				<Account />
 			</div>
-			<div className={styles.forecast}></div>
+			<div className={styles.forecast}> </div>
             <div className={styles.workspace}>
                 <h1>{"Calculator"}</h1>
                 <div>
@@ -27,16 +27,17 @@ export const CalculatorView: React.FC<CalculatorProps> = (props) => {
                         </tr>
                         </thead>
                         <tbody>
-                        {bonds.map((bond, i) => {
-                            return (
-                                <tr key={i}>
-                                    <td>{bond.instrumentId}</td>
-                                    <td>{bond.issuer}</td>
-                                    <td>{bond.notional}</td>
-                                    <td>{bond.maturityDate}</td>
-                                    <td>{bond.couponPercentage} %</td>
-                                </tr>)
-                        })}
+                        {Object.values(bonds)
+                            .map((bond, i) => {
+                                return (
+                                    <tr key={i}>
+                                        <td>{bond.instrumentId}</td>
+                                        <td>{bond.issuer}</td>
+                                        <td>{bond.notional}</td>
+                                        <td>{bond.maturityDate}</td>
+                                        <td>{bond.couponPercentage} %</td>
+                                    </tr>)
+                            })}
                         </tbody>
                     </table>
                 </div>

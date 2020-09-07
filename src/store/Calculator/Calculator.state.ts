@@ -1,9 +1,9 @@
 import {Bond} from "../../common/types";
 
 export type State = {
-	bonds: Array<Bond>
+	bonds: { [instrumentId: string]: Bond }
 };
 
 export const initState: State = {
-	bonds: []
+	bonds: {}
 };
