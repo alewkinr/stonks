@@ -5,9 +5,9 @@ export enum Currency {
 export class Bond {
 
     constructor(
-        private readonly _instrumentId: String,   // ISIN / CUSIP
-        private readonly _issuer: String,
-        private readonly _issuerImg: String,
+        private readonly _instrumentId: string,   // ISIN / CUSIP
+        private readonly _issuer: string,
+        private readonly _issuerImg: string,
         private readonly _maturityDate: Date,
         private readonly _notional: number,
         private readonly _currency: Currency,
@@ -22,7 +22,7 @@ export class Bond {
         this._couponRate = _couponRate;
     }
 
-    get instrumentId(): String {
+    get instrumentId(): string {
         return this._instrumentId;
     }
 
@@ -55,7 +55,7 @@ export class Bond {
     }
 
     static deserialize(input: any): Bond {
-        let newBond = new Bond(
+        return new Bond(
             input.instrumentId,
             input.issuer,
             input.issuerImg,
@@ -64,7 +64,5 @@ export class Bond {
             Currency[input.currency],
             input.couponRate
         );
-        console.log("here we go:" + newBond);
-        return newBond;
     }
 }
