@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 25px;
+  margin-right: 5px;
+}
+
+.text {
+  font-size: 12px;
+}
