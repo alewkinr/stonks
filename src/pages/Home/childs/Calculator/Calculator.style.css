@@ -1,4 +1,7 @@
 .container {
-	display: flex;
 	width: 980px;
+}
+
+.account {
+	width: calc(100% / 2);
 }
