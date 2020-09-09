@@ -1,3 +1,3 @@
-import { Projection } from "./Projection";
+import Projection from "./Projection";
 
 export { Projection };

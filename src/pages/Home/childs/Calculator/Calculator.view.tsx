@@ -3,6 +3,7 @@ import styles from "./Calculator.style.css";
 import React from "react";
 import { CalculatorProps } from "./Calculator";
 import { Account } from "./childs/Account";
+import { Projection } from "./childs/Projection";
 
 export const CalculatorView: React.FC<CalculatorProps> = (props) => {
   const { bonds } = props;
@@ -12,7 +13,9 @@ export const CalculatorView: React.FC<CalculatorProps> = (props) => {
 			<div className={styles.account}>
 				<Account />
 			</div>
-			<div className={styles.forecast}> </div>
+			<div className={styles.forecast}>
+                <Projection />
+            </div>
             <div className={styles.workspace}>
                 <h1>{"Calculator"}</h1>
                 <div>

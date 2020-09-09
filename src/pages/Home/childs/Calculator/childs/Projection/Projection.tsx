@@ -5,36 +5,30 @@ import { setEndDate } from "../../../../../../store/Projection/Projection.action
 import { AppState } from "../../../../../../store";
 
 type ProjectionState = {
-  endDate?: Date;
-  totalAmount?: string;
-  profitAmount?: string;
-  profitPercent?: string;
+	endDate?: Date;
+	totalAmount?: string;
+	profitAmount?: string;
+	profitPercent?: string;
 };
 
 type ProjectionDispatch = {
-  setEndDate?: typeof setEndDate;
+	setEndDate?: typeof setEndDate;
 };
 
 export type ProjectionProps = ProjectionState & ProjectionDispatch;
 
-export const Projection: React.FC<ProjectionProps> = (props) => {
-  return <ProjectionView {...props} />;
+const Projection: React.FC<ProjectionProps> = (props) => {
+	return <ProjectionView {...props} />;
 };
 
 const mapStateToProps = (state: AppState): ProjectionState => {
-  const {
-    endDate,
-    totalAmount,
-    profitAmount,
-    profitPercent,
-  } = state.projection;
+	const {endDate, totalAmount, profitAmount, profitPercent} = state.projection;
 
-  console.log("state.projection");
-  return { endDate, totalAmount, profitAmount, profitPercent };
+	return { endDate, totalAmount, profitAmount, profitPercent };
 };
 
 const mapDispatchToProps: ProjectionDispatch = {
-  setEndDate: setEndDate,
+	setEndDate: setEndDate,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Projection);
