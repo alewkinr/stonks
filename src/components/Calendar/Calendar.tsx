@@ -3,19 +3,15 @@ import { CalendarView } from "./Calendar.view";
 import { ExtendedAPIPlugin } from "webpack";
 
 type CalendarState = {
-  endDate?: Date;
+  endDate: Date;
 };
 
-export type CalendarProps = CalendarState;
+type CalendarDispatch = {
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+export type CalendarProps = CalendarState & CalendarDispatch;
 
 export const Calendar: React.FC<CalendarProps> = (props) => {
   return <CalendarView {...props} />;
 };
-
-Calendar.defaultProps = {
-  endDate: new Date(),
-};
-
-Calendar.defaultProps.endDate.setFullYear(
-  Calendar.defaultProps.endDate.getFullYear() + 5
-);

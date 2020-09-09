@@ -11,7 +11,7 @@ export const CalendarView: React.FC<CalendarProps> = (props) => {
   var [endDate, setEndDate] = React.useState(props.endDate);
   var endDateString = endDate.toLocaleString().substr(0, 10);
 
-  console.log(endDate.toLocaleString());
+  const { onChange } = props;
   return (
     <div className={styles.container}>
       <DatePicker
@@ -26,6 +26,7 @@ export const CalendarView: React.FC<CalendarProps> = (props) => {
         }
         selected={endDate}
         onChange={(date) => {
+          onChange;
           setEndDate(date);
           document.getElementById("calendarText").innerHTML =
             "по " + date.toLocaleDateString();
