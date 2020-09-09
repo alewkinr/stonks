@@ -21,6 +21,7 @@ export const CalculatorView: React.FC<CalculatorProps> = (props) => {
                         <tr>
                             <th style={{textAlign: "left", fontWeight: "bold"}}>InstrumentId</th>
                             <th style={{textAlign: "left", fontWeight: "bold"}}>Issuer</th>
+                            <th style={{textAlign: "left", fontWeight: "bold"}}>Bond</th>
                             <th style={{textAlign: "left", fontWeight: "bold"}}>Notional</th>
                             <th style={{textAlign: "left", fontWeight: "bold"}}>Maturity Date</th>
                             <th style={{textAlign: "left", fontWeight: "bold"}}>Coupon</th>
@@ -33,6 +34,7 @@ export const CalculatorView: React.FC<CalculatorProps> = (props) => {
                                     <tr key={i}>
                                         <td>{bond.instrumentId}</td>
                                         <td>{bond.issuer}</td>
+                                        <td>{bond.name}</td>
                                         <td>{bond.notional}</td>
                                         <td>{bond.maturityDate}</td>
                                         <td>{bond.couponAnnualPercent} %</td>
