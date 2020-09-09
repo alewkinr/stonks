@@ -18,3 +18,12 @@
 .currency.ruble {
   background-image: url(./contents/rubleProfit.svg);
 }
+
+.percent {
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 3px;
+  background-image: url(./contents/percent.svg);
+}

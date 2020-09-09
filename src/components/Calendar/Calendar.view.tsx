@@ -5,7 +5,7 @@ import React from "react";
 import { CalendarProps } from "./Calendar";
 
 import DatePicker from "react-datepicker";
-import calendarIcon from "./images/calendar.png";
+import calendarIcon from "./images/calendar.svg";
 
 export const CalendarView: React.FC<CalendarProps> = (props) => {
   var [endDate, setEndDate] = React.useState(props.endDate);

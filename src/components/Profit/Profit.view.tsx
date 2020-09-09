@@ -10,7 +10,8 @@ export const ProfitView: React.FC<ProfitProps> = (props) => {
     <div className={styles.container}>
       <div className={styles.value}>{value}</div>
       <div className={`${styles.currency} ${styles[currency]}`}></div>
-      <div className={styles.value}>| {percent} %</div>
+      <div className={styles.value}>| {percent} </div>
+      <div className={styles.percent}></div>
     </div>
   );
 };
