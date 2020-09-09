@@ -7,10 +7,10 @@
     "issuerName": "Министерство финансов Российской Федерации",
     "issuerImg": "any",
     "maturityDate": "2039-03-16",
-    "couponAnnualPercent": 7.7,
-    "couponCost": 38.39,
     "notional": 1000.0,
     "currency": "RUB",
+    "couponAnnualPercent": 7.7,
+    "couponCost": 38.39,
     "couponPeriod": 2
   },
   {
@@ -21,10 +21,10 @@
     "issuerName": "Акционерное общество \"Тинькофф Банк\"",
     "issuerImg": "any",
     "maturityDate": "2029-09-12",
-    "couponAnnualPercent": 8.25,
-    "couponCost": 41.14,
     "notional": 1000.0,
     "currency": "RUB",
+    "couponAnnualPercent": 8.25,
+    "couponCost": 41.14,
     "couponPeriod": 2
   },
   {
@@ -35,10 +35,10 @@
     "issuerName": "Публичное акционерное общество \"Сбербанк России\"",
     "issuerImg": "any",
     "maturityDate": "2027-05-30",
-    "couponAnnualPercent": 8.3,
-    "couponCost": 41.84,
     "notional": 1000.0,
     "currency": "RUB",
+    "couponAnnualPercent": 8.3,
+    "couponCost": 41.84,
     "couponPeriod": 2
   },
   {
@@ -49,10 +49,10 @@
     "issuerName": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"АЛЬФА-БАНК\"",
     "issuerImg": "any",
     "maturityDate": "2033-03-17",
-    "couponAnnualPercent": 7.35,
-    "couponCost": 36.85,
     "notional": 1000.0,
     "currency": "RUB",
+    "couponAnnualPercent": 7.35,
+    "couponCost": 36.85,
     "couponPeriod": 2
   },
   {
@@ -63,10 +63,10 @@
     "issuerName": "Публичное акционерное общество \"МегаФон\"",
     "issuerImg": "any",
     "maturityDate": "2026-05-29",
-    "couponAnnualPercent": 9.9,
-    "couponCost": 24.68,
     "notional": 1000.0,
     "currency": "RUB",
+    "couponAnnualPercent": 9.9,
+    "couponCost": 24.68,
     "couponPeriod": 4
   },
   {
@@ -77,10 +77,10 @@
     "issuerName": "Публичное акционерное общество \"Газпром\"",
     "issuerImg": "any",
     "maturityDate": "2048-06-23",
-    "couponAnnualPercent": 8.1,
-    "couponCost": 40.39,
     "notional": 1000.0,
     "currency": "RUB",
+    "couponAnnualPercent": 8.1,
+    "couponCost": 40.39,
     "couponPeriod": 2
   },
   {
@@ -91,10 +91,10 @@
     "issuerName": "публичное акционерное общество \"Нефтяная компания \"Роснефть\"\"",
     "issuerImg": "any",
     "maturityDate": "2030-05-29",
-    "couponAnnualPercent": 5.8,
-    "couponCost": 14.46,
     "notional": 1000.0,
     "currency": "RUB",
+    "couponAnnualPercent": 5.8,
+    "couponCost": 14.46,
     "couponPeriod": 4
   },
   {
@@ -105,10 +105,10 @@
     "issuerName": "открытое акционерное общество \"Российские железные дороги\"",
     "issuerImg": "any",
     "maturityDate": "2046-05-22",
-    "couponAnnualPercent": 9.7,
-    "couponCost": 48.37,
     "notional": 1000.0,
     "currency": "RUB",
+    "couponAnnualPercent": 9.7,
+    "couponCost": 48.37,
     "couponPeriod": 2
   },
   {
@@ -119,10 +119,10 @@
     "issuerName": "Публичное акционерное общество \"Горно-металлургическая компания \"Норильский никель\"\"",
     "issuerImg": "any",
     "maturityDate": "2026-02-06",
-    "couponAnnualPercent": 11.6,
-    "couponCost": 57.84,
     "notional": 1000.0,
     "currency": "RUB",
+    "couponAnnualPercent": 11.6,
+    "couponCost": 57.84,
     "couponPeriod": 2
   },
   {
@@ -133,10 +133,10 @@
     "issuerName": "Общество с ограниченной ответственностью \"ИКС 5 ФИНАНС\"",
     "issuerImg": "any",
     "maturityDate": "2035-06-12",
-    "couponAnnualPercent": 5.65,
-    "couponCost": 28.17,
     "notional": 1000.0,
     "currency": "RUB",
+    "couponAnnualPercent": 5.65,
+    "couponCost": 28.17,
     "couponPeriod": 2
   },
   {
@@ -147,10 +147,10 @@
     "issuerName": "акционерное общество \"Почта России\"",
     "issuerImg": "any",
     "maturityDate": "2030-07-23",
-    "couponAnnualPercent": 5.9,
-    "couponCost": 29.42,
     "notional": 1000.0,
     "currency": "RUB",
+    "couponAnnualPercent": 5.9,
+    "couponCost": 29.42,
     "couponPeriod": 2
   },
   {
@@ -161,10 +161,10 @@
     "issuerName": "Общество с ограниченной ответственностью \"Хоум Кредит энд Финанс Банк\"",
     "issuerImg": "any",
     "maturityDate": "2024-09-13",
-    "couponAnnualPercent": 8.65,
-    "couponCost": 21.57,
     "notional": 1000.0,
     "currency": "RUB",
+    "couponAnnualPercent": 8.65,
+    "couponCost": 21.57,
     "couponPeriod": 4
   }
 ]
