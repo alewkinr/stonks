@@ -5,7 +5,7 @@ import { CalculatorProps } from "./Calculator";
 import { Account } from "./childs/Account";
 
 export const CalculatorView: React.FC<CalculatorProps> = (props) => {
-    const {bonds} = props;
+  const { bonds } = props;
 
 	return (
 		<div className={styles.container}>

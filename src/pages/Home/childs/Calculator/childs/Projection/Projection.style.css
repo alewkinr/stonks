@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.title {
+  font-size: 24px;
+  padding-right: 20px;
+  padding-top: 7px;
+  padding-bottom: 10px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 25px;
+}
+
+.item > * + * {
+  margin-top: 5px;
+}
+
+.profit {
+  color: #2ecc71;
+  fill: #2ecc71;
+}
