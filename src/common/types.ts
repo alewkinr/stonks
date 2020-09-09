@@ -49,6 +49,10 @@ export class Bond {
         return this._instrumentId;
     }
 
+    get name(): string {
+        return this._name;
+    }
+
     get issuer(): String {
         return this._issuer;
     }
