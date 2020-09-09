@@ -35,7 +35,7 @@ export const CalculatorView: React.FC<CalculatorProps> = (props) => {
                                         <td>{bond.issuer}</td>
                                         <td>{bond.notional}</td>
                                         <td>{bond.maturityDate}</td>
-                                        <td>{bond.couponPercentage} %</td>
+                                        <td>{bond.couponAnnualPercent} %</td>
                                     </tr>)
                             })}
                         </tbody>
