@@ -2,6 +2,17 @@ export enum Currency {
     RUB = "RUB"
 }
 
+export class BondPayment {
+
+    constructor(
+        private readonly _date: Date,
+        private readonly _payment: number)
+    {
+        this._date = _date;
+        this._payment = _payment;
+    }
+}
+
 export class Bond {
 
     constructor(
@@ -16,7 +27,8 @@ export class Bond {
         private readonly _currency: Currency,
         private readonly _couponAnnualPercent: number,
         private readonly _couponCost: number,
-        private readonly _couponPeriod: number)
+        private readonly _couponPeriod: number,
+        private readonly _couponCalendar: Array<BondPayment>)
     {
         this._instrumentId = _instrumentId;
         this._shortName = _shortName;
@@ -30,6 +42,7 @@ export class Bond {
         this._couponAnnualPercent = _couponAnnualPercent;
         this._couponCost = _couponCost;
         this._couponPeriod = _couponPeriod;
+        this._couponCalendar = _couponCalendar;
     }
 
     get instrumentId(): string {
@@ -77,7 +90,12 @@ export class Bond {
             Currency[input.currency],
             input.couponAnnualPercent,
             input.couponCost,
-            input.couponPeriod
+            input.couponPeriod,
+            input.couponCalendar
+                .map(x => new BondPayment(
+                    new Date(Date.parse(x.date)),
+                    x.payment)
+                )
         );
     }
 }
