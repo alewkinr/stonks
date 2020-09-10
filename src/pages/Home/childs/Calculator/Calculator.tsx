@@ -21,7 +21,6 @@ const Calculator: React.FC<CalculatorProps> = (props) => {
         props.initializeBonds(bonds
             .map(bond => Bond.deserialize(bond))
             .reduce(function (map: { [instrumentId: string]: Bond }, bond: Bond) {
-                console.log(bond.instrumentId);
                 map[bond.instrumentId] = bond;
                 return map;
             }, {}));
