@@ -1,0 +1,36 @@
+stages:
+  - build
+  - deploy
+
+image: docker:19.03.11
+services:
+  - docker:19.03.1-dind
+
+cache:
+  paths:
+    - node_modules/
+
+
+build-prod:
+ stage: build
+ image: node:latest
+ environment:
+  name: production
+ only:
+   refs:
+     - master
+ script:
+   - npm install && npm run prod
+
+deploy-prod:
+  image: garland/docker-s3cmd
+  stage: deploy
+  only:
+    refs:
+      - master
+  environment:
+    name: production
+  script:
+    - echo "$S3_CONFIG" > "$(pwd)/s3cfg"
+    - s3cmd -c $(pwd)/s3cfg --storage-class STANDARD put -r public/ s3://uinvest/
+

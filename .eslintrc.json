@@ -9,14 +9,20 @@
 		"plugin:react/recommended",
 		"plugin:@typescript-eslint/eslint-recommended",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:@typescript-eslint/recommended-requiring-type-checking"
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"plugin:prettier/recommended",
+		"prettier/flowtype",
+		"prettier/react",
+		"prettier/standard",
+		"prettier/@typescript-eslint",
+		"prettier/babel"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"project": "tsconfig.json",
 		"tsconfigRootDir": "."
 	},
-	"plugins": ["react", "react-hooks", "promise", "optimize-regex", "sonarjs", "@typescript-eslint"],
+	"plugins": ["react", "react-hooks", "promise", "optimize-regex", "sonarjs", "@typescript-eslint", "prettier"],
 	"settings": {
 		"react": {
 			"createClass": "createReactClass",
@@ -52,6 +58,8 @@
 		"react/jsx-pascal-case": "error",
 
 		"react-hooks/rules-of-hooks": "error",
-		"react-hooks/exhaustive-deps": "warn"
+		"react-hooks/exhaustive-deps": "warn",
+
+		"prettier/prettier": "error"
 	}
 }

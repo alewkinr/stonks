@@ -1,11 +1,12 @@
-import "./App.style.css";
+import "./App.gstyle.css"
 
-import React from "react";
-import { routes } from "./Routes";
-import { HashRouter as Router, Route, RouteProps } from "react-router-dom";
+import React from "react"
+import { Home } from "./pages/Home"
+import { Bond } from "./components/Bond"
 
-export const App = (): JSX.Element => <div className="app">
-	<Router hashType="noslash" >
-		{routes.map((route: RouteProps) => <Route key={route.path as string} {...route} />)}
-	</Router>
-</div>;
+export const App = (): JSX.Element => (
+    <div className="app">
+        <Home />
+        <Bond />
+    </div>
+)

@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chart {
+  width: 400px;
+  height: 200px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(./contents/chart.svg);
+}
