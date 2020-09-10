@@ -13,6 +13,9 @@ cache:
 
 build-prod:
  stage: build
+ artifacts:
+    paths:
+     - public/
  image: node:latest
  environment:
   name: production
