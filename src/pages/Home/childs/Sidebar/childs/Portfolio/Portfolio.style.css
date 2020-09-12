@@ -10,3 +10,7 @@
 .label {
 	color: #ededed;
 }
+
+.bonds > * + * {
+	margin-top: 10px;
+}
