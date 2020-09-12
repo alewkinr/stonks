@@ -1,0 +1,31 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	border-radius: 6px;
+	background-color: rgba(0, 0, 0, 0.15);
+	position: relative;
+}
+
+.container > * + * {
+	margin-top: 10px;
+}
+
+.wrapper {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.title {
+	font-style: normal;
+	font-weight: 200;
+	font-size: 14px;
+}
+
+.value {
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+}

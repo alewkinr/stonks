@@ -3,7 +3,6 @@
 	align-items: center;
 }
 
-
 .label {
 	display: flex;
 	position: relative;
@@ -25,41 +24,32 @@
 .toggle {
 	width: 32px;
 	height: 18px;
-	background-color: #eeeeee;
+	background-color: transparent;
+	border: 1px solid #fff;
 	border-radius: 9px;
 	position: relative;
-}
-
-.title {
-	font-size: 14px;
-	font-weight: bold;
+	box-sizing: border-box;
 }
 
 .toggle:after {
 	content: "";
-	width: 16px;
-	height: 16px;
-	border-radius: 9px;
-	background-color: #c4c4c4;
+	width: 14px;
+	height: 14px;
+	border-radius: 8px;
 	position: absolute;
 	top: 1px;
+	left: 1px;
+	transition: transform ease-in-out 100ms;
 }
 
 .input:not(:checked) + .toggle:after {
-	left: 1px;
+	transform: translateX(0);
+	background-color: transparent;
+	border: 1px solid #fff;
+	box-sizing: border-box;
 }
 
 .input:checked + .toggle:after {
-	right: 1px;
-	background-color: #0984E3;
-}
-
-.info {
-	width: 14px;
-	height: 14px;
-	margin-left: 5px;
-	background-image: url(../../images/info.svg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	cursor: pointer;
+	background-color: #fff;
+	transform: translateX(calc(100% - 1px));
 }

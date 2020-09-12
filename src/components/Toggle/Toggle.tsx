@@ -2,8 +2,7 @@ import React from "react";
 import { ToggleView } from "./Toggle.view";
 
 type ToggleState = {
-	title: string;
-	isChecked: boolean;
+	checked: boolean;
 };
 
 type ToggleDispatch = {
