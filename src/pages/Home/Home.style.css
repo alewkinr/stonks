@@ -5,6 +5,7 @@
 }
 
 .sidebar {
+	position: fixed;
 	width: 318px;
 	height: 100vh;
 }
@@ -12,4 +13,5 @@
 .workspace {
 	width: calc(100vw - 318px);
 	height: 100vh;
+	margin-left: 318px;
 }
