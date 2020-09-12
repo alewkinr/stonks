@@ -1,0 +1,12 @@
+.container {
+	display: flex;
+	flex-direction: column;
+}
+
+.container > * + * {
+	margin-top: 10px;
+}
+
+.label {
+	color: #ededed;
+}
