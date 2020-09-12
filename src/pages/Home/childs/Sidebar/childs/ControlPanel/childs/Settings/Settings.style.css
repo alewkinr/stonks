@@ -19,9 +19,22 @@
 }
 
 .title {
+	display: flex;
+	align-items: center;
 	font-style: normal;
 	font-weight: 200;
 	font-size: 14px;
+}
+
+.info {
+	width: 10px;
+	height: 10px;
+	background-image: url(./contents/info.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+	opacity: .2;
+	margin-left: 5px;
 }
 
 .value {

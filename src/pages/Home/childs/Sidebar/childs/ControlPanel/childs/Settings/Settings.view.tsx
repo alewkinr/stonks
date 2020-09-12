@@ -10,13 +10,19 @@ export const SettingsView: React.FC<SettingsProps> = (props) => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.wrapper}>
-				<div className={styles.title}>{"Реинвестиции"}</div>
+				<div className={styles.title}>
+					<span>{"Реинвестиции"}</span>
+					<div className={styles.info} />
+				</div>
 				<div className={styles.control}>
 					<Toggle checked={reinvestment} onChange={() => setReinvestment(!reinvestment)} />
 				</div>
 			</div>
 			<div className={styles.wrapper}>
-				<div className={styles.title}>{"Докупка"}</div>
+				<div className={styles.title}>
+					<span>{"Докупка"}</span>
+					<div className={styles.info} />
+				</div>
 				<div className={styles.control}>
 					<Toggle checked={additionalPurchase} onChange={() => setAdditionalPurchase(!additionalPurchase)} />
 				</div>
