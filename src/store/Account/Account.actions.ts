@@ -1,11 +1,12 @@
+import { AccountType } from "../../enums/AccountType";
 import { Keys } from "./Account.keys";
 
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 
-export const setIsIndividualInvestmentAccount = (isIndividualInvestmentAccount: boolean) => {
+export const setAccountType = (accountType: AccountType) => {
 	return {
-		type: Keys.SET_IS_INDIVIDUAL_INVESTMENT_ACCOUNT,
-		isIndividualInvestmentAccount,
+		type: Keys.SET_ACCOUNT_TYPE,
+		accountType,
 	} as const;
 }
 

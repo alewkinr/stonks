@@ -1,9 +1,11 @@
+import { AccountType } from "../../enums/AccountType";
+
 export type State = {
-	isIndividualInvestmentAccount: boolean;
+	accountType: AccountType;
 	originAmount: string;
 };
 
 export const initState: State = {
-	isIndividualInvestmentAccount: false,
+	accountType: AccountType.BROKER,
 	originAmount: "",
 };

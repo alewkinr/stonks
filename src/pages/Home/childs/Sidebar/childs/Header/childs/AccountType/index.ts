@@ -1,3 +1,3 @@
-import { AccountType } from "./AccountType";
+import AccountType from "./AccountType";
 
 export { AccountType };

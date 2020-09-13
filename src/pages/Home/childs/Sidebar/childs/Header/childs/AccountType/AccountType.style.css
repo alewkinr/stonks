@@ -19,15 +19,15 @@
 	transition: transform ease-in-out 100ms;
 }
 
-.container.iia:after {
+.container.broker:after {
 	transform: translateX(0);
 }
 
-.container.second:after {
+.container.individual_investment:after {
 	transform: translateX(calc(100% - 2px));
 }
 
-.account_type {
+.type {
 	width: 50%;
 	text-align: center;
 	font-size: 11px;

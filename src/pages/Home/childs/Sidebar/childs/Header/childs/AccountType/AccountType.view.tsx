@@ -2,16 +2,17 @@ import styles from "./AccountType.style.css";
 
 import React, { useState } from "react";
 import { AccountTypeProps } from "./AccountType";
+import { AccountType } from "../../../../../../../../enums/AccountType";
 
-// TODO: Сделать вывод типа из общего состояния.
 export const AccountTypeView: React.FC<AccountTypeProps> = (props) => {
-	const [accountType, setAccountType] = useState<"iia" | "second">("iia");
+	const {accountType} = props;
+
+	const {setAccountType} = props;
 
 	return (
-		<div className={`${styles.container} ${styles[accountType]}`}
-			onClick={() => setAccountType(accountType === "iia" ? "second" : "iia")}>
-			<div className={styles.accountType}>БС</div>
-			<div className={styles.accountType}>ИИС</div>
+		<div className={`${styles.container} ${styles[accountType]}`} >
+			<div className={styles.type} onClick={() => setAccountType(AccountType.BROKER)}>БС</div>
+			<div className={styles.type} onClick={() => setAccountType(AccountType.INDIVIDUAL_INVESTMENT)}>ИИС</div>
 		</div>
 	);
 }
