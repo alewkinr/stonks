@@ -5,6 +5,7 @@ import { SidebarProps } from "./Sidebar";
 import { Header } from "./childs/Header";
 import { ControlPanel } from "./childs/ControlPanel";
 import { Portfolio } from "./childs/Portfolio";
+import { Footer } from "./childs/Footer";
 
 export const SidebarView: React.FC<SidebarProps> = (props) => {
 	return (
@@ -12,6 +13,9 @@ export const SidebarView: React.FC<SidebarProps> = (props) => {
 			<Header />
 			<ControlPanel />
 			<Portfolio />
+			<div className={styles.footer}>
+				<Footer />
+			</div>
 		</div>
 	);
 }
