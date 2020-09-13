@@ -1,0 +1,83 @@
+.container {
+	display: flex;
+	width: 100%;
+	padding: 8px 10px;
+	box-sizing: border-box;
+}
+
+.cover {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background: linear-gradient(91.81deg, #908893 -0.33%, #779096 45.12%, #538273 104.97%);
+	box-shadow: 0px 4px 8px 2px rgba(153, 135, 118, 0.4);
+	border-radius: 8px;
+	padding: 10px;
+	box-sizing: border-box;
+	position: relative;
+	align-items: center;
+}
+
+.cover > * + * {
+	margin-top: 39px;
+}
+
+.cover > .label {
+	font-weight: 200;
+	font-size: 24px;
+	color: #EDEDED;
+	z-index: 1;
+	align-self: flex-start;
+}
+
+.forecast {
+	display: flex;
+	width: 800px;
+	align-items: flex-end;
+	justify-content: space-between;
+	color: #ededed;
+}
+
+.profit,
+.total_amount,
+.profit_percentage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.money,
+.percent {
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+}
+
+.money:after {
+	content: "";
+	width: 18px;
+	height: 18px;
+	background-image: url(./contents/ruble.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 5px;
+}
+
+.profit > .money {
+	font-size: 48px;
+}
+
+.profit > .money:after {
+	width: 38px;
+	height: 38px;
+}
+
+.percent:after {
+	content: "";
+	width: 18px;
+	height: 18px;
+	background-image: url(./contents/percent.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-left: 5px;
+}

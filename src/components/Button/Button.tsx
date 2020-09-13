@@ -3,8 +3,9 @@ import { ButtonView } from "./Button.view";
 import { ButtonType } from "./types/ButtonType";
 
 type ButtonState = {
-	name: string;
-	type: ButtonType;
+	name?: string;
+	type?: ButtonType;
+	className?: string;
 };
 
 export type ButtonProps = ButtonState;

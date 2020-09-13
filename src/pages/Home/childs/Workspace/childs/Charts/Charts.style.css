@@ -1,0 +1,26 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	width: 800px;
+	height: 375px;
+	align-self: center;
+	color: #222;
+}
+
+.navbar {
+	display: flex;
+}
+
+.navbar > * + * {
+	margin-left: 10px;
+}
+
+.item {
+	color: #ccc;
+	padding: 10px 0;
+	cursor: pointer;
+}
+
+.item.active {
+	color: #7A7285;
+}

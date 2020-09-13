@@ -4,11 +4,11 @@ import React from "react";
 import { ButtonProps } from "./Button";
 
 export const ButtonView: React.FC<ButtonProps> = (props) => {
-	const {name} = props;
+	const {name, type, className} = props;
 
 	return (
 		<div className={styles.container}>
-			<button className={styles.button}>{name}</button>
+			<button className={`${styles.button} ${styles[type]} ${className}`}>{name}</button>
 		</div>
 	);
 }
