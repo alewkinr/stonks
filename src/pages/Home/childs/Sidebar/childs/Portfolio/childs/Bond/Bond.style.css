@@ -32,7 +32,7 @@
 }
 
 .title {
-	width: 130px;
+	width: 95px;
 	margin-left: 15px;
 	font-weight: bold;
 	overflow: hidden;
@@ -41,7 +41,28 @@
 }
 
 .count {
+	display: flex;
+	align-items: center;
 	color: #c4c4c4;
+}
+
+.count > * + * {
+	margin-left: 5px;
+}
+
+.control {
+	width: 14px;
+	height: 14px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.minus {
+	background-image: url(./contents/minus.control.svg);
+}
+
+.plus {
+	background-image: url(./contents/plus.control.svg);
 }
 
 .full_price {
@@ -69,6 +90,7 @@
 
 .secondary {
 	display: flex;
+	justify-content: space-between;
 }
 
 .maturity_date {

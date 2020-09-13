@@ -8,14 +8,18 @@ export const BondView: React.FC<BondProps> = (props) => {
 	const [opened, setOpened] = useState(false);
 
 	return (
-		<div className={styles.container} onClick={() => setOpened(!opened)}>
+		<div className={styles.container}>
 			<div className={styles.basic}>
-				<div className={styles.left}>
+				<div className={styles.left} onClick={() => setOpened(!opened)}>
 					<img className={styles.image} src={tinkoff} />
 					<div className={styles.title}>{"Тинькофф1R"}</div>
 				</div>
 				<div className={styles.right}>
-					<div className={styles.count}>{"100 шт."}</div>
+					<div className={styles.count}>
+						<div className={`${styles.control} ${styles.minus}`} />
+						<span>{`100 шт.`}</span>
+						<div className={`${styles.control} ${styles.plus}`} />
+					</div>
 					<div className={styles.fullPrice}>{"32 487"}</div>
 				</div>
 			</div>
