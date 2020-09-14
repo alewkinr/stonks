@@ -18,15 +18,6 @@ export const SettingsView: React.FC<SettingsProps> = (props) => {
 					<Toggle checked={reinvestment} onChange={() => setReinvestment(!reinvestment)} />
 				</div>
 			</div>
-			<div className={styles.wrapper}>
-				<div className={styles.title}>
-					<span>{"Докупка"}</span>
-					<div className={styles.info} />
-				</div>
-				<div className={styles.control}>
-					<Toggle checked={additionalPurchase} onChange={() => setAdditionalPurchase(!additionalPurchase)} />
-				</div>
-			</div>
 		</div>
 	);
 }

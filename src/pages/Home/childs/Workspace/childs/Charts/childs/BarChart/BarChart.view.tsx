@@ -2,8 +2,6 @@ import styles from "./BarChart.style.css";
 
 import React from "react";
 import { BarChartProps } from "./BarChart";
-import { Label } from "../Label";
-
 import { Chart } from "react-google-charts";
 
 export const BarChartView: React.FC<BarChartProps> = (props) => {
@@ -26,7 +24,7 @@ export const BarChartView: React.FC<BarChartProps> = (props) => {
                     chartArea: { width: "80%" },
                     isStacked: true,
                     legend: { position: "top", maxLines: 5 },
-                    colors: ["#7A7285", "#00CC00"],
+                    colors: ["#3498db", "#34495e"],
                 }}
                 rootProps={{ "data-testid": "2" }}
             />

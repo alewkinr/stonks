@@ -19,15 +19,3 @@
 .bonds > * + * {
     margin-top: 10px;
 }
-
-.control {
-    width: 14px;
-    height: 14px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 10px;
-}
-
-.plus {
-    background-image: url(./contents/plus.bond.svg);
-}

@@ -2,8 +2,7 @@ import styles from "./Charts.style.css";
 
 import React from "react";
 import { ChartsProps } from "./Charts";
-
-import { BarChart } from "../../../.././../../components/BarChart";
+import { BarChart } from "./childs/BarChart";
 
 export const ChartsView: React.FC<ChartsProps> = (props) => {
     return (
@@ -14,7 +13,9 @@ export const ChartsView: React.FC<ChartsProps> = (props) => {
                 </div>
                 <div className={styles.item}>{"Состав"}</div>
             </div>
-            <BarChart />
+            <div className={styles.charts}>
+                <BarChart />
+            </div>
         </div>
     );
 };

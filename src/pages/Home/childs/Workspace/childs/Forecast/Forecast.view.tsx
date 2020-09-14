@@ -8,7 +8,7 @@ export const ForecastView: React.FC<ForecastProps> = (props) => {
     return (
         <div className={styles.container}>
             <div className={styles.cover}>
-                <div className={styles.label}>{"Прогноз"}</div>
+                <div className={styles.label}>{"прогноз"}</div>
                 <div className={styles.forecast}>
                     <div className={styles.totalAmount}>
                         <div className={styles.money}>{"1 783 967"}</div>
@@ -23,11 +23,7 @@ export const ForecastView: React.FC<ForecastProps> = (props) => {
                         <div className={styles.label}>{"Итоговая сумма"}</div>
                     </div>
                 </div>
-                <Button
-                    name="Консультация"
-                    type="negative"
-                    className={styles.button}
-                />
+                <Button name="Консультация" type="negative" className={styles.button} />
             </div>
         </div>
     );

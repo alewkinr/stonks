@@ -24,3 +24,7 @@
 .item.active {
 	color: #7A7285;
 }
+
+.charts {
+	margin-top: auto;
+}
