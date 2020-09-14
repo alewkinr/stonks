@@ -11,7 +11,7 @@ export const BarChartView: React.FC<BarChartProps> = (props) => {
     return (
         <div className={styles.container}>
             <Chart
-                width={"700px"}
+                width={"800px"}
                 height={"300px"}
                 chartType="ColumnChart"
                 chartLanguage="ru"

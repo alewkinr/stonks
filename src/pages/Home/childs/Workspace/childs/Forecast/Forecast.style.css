@@ -33,7 +33,7 @@
 
 .forecast {
     display: flex;
-    width: 800px;
+    width: 980px;
     align-items: flex-end;
     justify-content: space-between;
     color: #ededed;

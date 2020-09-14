@@ -7,11 +7,11 @@ import { Label } from "../Label";
 import { Chart } from "react-google-charts";
 
 export const PieChartView: React.FC<PieChartProps> = (props) => {
-    const {data} = props;
+    const { data } = props;
     return (
         <div className={styles.container}>
             <Chart
-                width={"700px"}
+                width={"800px"}
                 height={"300px"}
                 chartType="PieChart"
                 chartLanguage="ru"
