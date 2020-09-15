@@ -2,7 +2,9 @@ import React from "react";
 import { RowView } from "./Row.view";
 
 type RowState = {
-    /* your states */
+    date: string;
+    bondName: string;
+    sum: string;
 };
 
 export type RowProps = RowState;
