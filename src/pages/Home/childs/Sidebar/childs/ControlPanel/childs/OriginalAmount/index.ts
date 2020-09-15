@@ -1,3 +1,3 @@
-import { OriginalAmount } from "./OriginalAmount";
+import OriginalAmount from "./OriginalAmount";
 
 export { OriginalAmount };

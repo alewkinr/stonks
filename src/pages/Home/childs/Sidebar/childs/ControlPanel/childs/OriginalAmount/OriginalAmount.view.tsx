@@ -1,16 +1,21 @@
 import styles from "./OriginalAmount.style.css";
 
-import React from "react";
+import React, { useState } from "react";
 import { OriginalAmountProps } from "./OriginalAmount";
 import { InfoTooltip } from "../../../../../../../../components/InfoTooltip"
+import ContentEditable from "react-contenteditable";
+import { convertToFormat } from "./handlers/ConvertToFormat";
 
-// TODO: Избавиться от дублирования кода. Аналогичные компоненты: ForecastPeriod, DepositingFunds, Settings.
 export const OriginalAmountView: React.FC<OriginalAmountProps> = (props) => {
+	const {originAmount, setOriginalAmount} = props;
+
 	return (
 		<div className={styles.container} style={{ height: "50px" }}>
 			<div className={styles.title}>{"Капитал"}</div>
 			<InfoTooltip text="Сумма, которую вы готовы вложить в момент открытия счета" />
-			<div className={styles.value}>{"1 458 465"}</div>
+			<ContentEditable className={styles.value}
+				html={convertToFormat(originAmount)}
+				onChange={e => setOriginalAmount(e.target.value)} />
 		</div>
 	);
 }

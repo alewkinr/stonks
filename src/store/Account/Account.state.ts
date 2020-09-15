@@ -2,10 +2,10 @@ import { AccountType } from "../../enums/AccountType";
 
 export type State = {
 	accountType: AccountType;
-	originAmount: string;
+	originalAmount: string;
 };
 
 export const initState: State = {
 	accountType: AccountType.BROKER,
-	originAmount: "",
+	originalAmount: "",
 };
