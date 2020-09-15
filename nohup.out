@@ -1,0 +1,1978 @@
+
+> clientapp@1.0.0 dev /home/alewkinr/tech/js/clientapp
+> webpack-dev-server --mode development --open --hot
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://localhost:8081/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/alewkinr/tech/js/clientapp/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /index.html
+
+> clientapp@1.0.0 dev /home/alewkinr/tech/js/clientapp
+> webpack-dev-server --mode development --open --hot
+
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://localhost:8080/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /home/alewkinr/tech/js/clientapp/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /index.html
+[34mℹ[39m [90m｢wdm｣[39m: wait until bundle finished: /
+[33m⚠[39m [90m｢wdm｣[39m: Hash: ee298bfa20a9968560b6
+Version: webpack 4.41.5
+Time: 6741ms
+Built at: 09/15/2020 6:27:57 PM
+            Asset       Size  Chunks             Chunk Names
+   GradientBG.png  763 bytes          [emitted]  
+      UInvest.svg    2.3 KiB          [emitted]  
+    app.config.js   47 bytes          [emitted]  
+     dog-mail.svg    6.6 KiB          [emitted]  
+      favicon.ico    361 KiB          [emitted]  
+  index.bundle.js   2.02 MiB    main  [emitted]  main
+       index.html  426 bytes          [emitted]  
+         info.svg  559 bytes          [emitted]  
+minus.control.svg  222 bytes          [emitted]  
+percent.green.svg  825 bytes          [emitted]  
+      percent.svg  825 bytes          [emitted]  
+ plus.control.svg  314 bytes          [emitted]  
+  ruble.black.svg   1.54 KiB          [emitted]  
+        ruble.svg   1.54 KiB          [emitted]  
+      tinkoff.png    2.2 KiB          [emitted]  
+Entrypoint main = index.bundle.js
+[0] multi (webpack)-dev-server/client?http://localhost:8080 (webpack)/hot/dev-server.js ./src/index 52 bytes {main} [built]
+[./node_modules/react-dom/index.js] 1.33 KiB {main} [built]
+[./node_modules/react-modal/lib/index.js] 341 bytes {main} [built]
+[./node_modules/react-redux/es/index.js] 776 bytes {main} [built]
+[./node_modules/react/index.js] 190 bytes {main} [built]
+[./node_modules/redux/es/redux.js] 23.6 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/index.js?http://localhost:8080] (webpack)-dev-server/client?http://localhost:8080 4.29 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/overlay.js] (webpack)-dev-server/client/overlay.js 3.51 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/socket.js] (webpack)-dev-server/client/socket.js 1.53 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/utils/createSocketUrl.js] (webpack)-dev-server/client/utils/createSocketUrl.js 2.91 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/utils/log.js] (webpack)-dev-server/client/utils/log.js 964 bytes {main} [built]
+[./node_modules/webpack-dev-server/client/utils/reloadApp.js] (webpack)-dev-server/client/utils/reloadApp.js 1.59 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/utils/sendMessage.js] (webpack)-dev-server/client/utils/sendMessage.js 402 bytes {main} [built]
+[./node_modules/webpack/hot/dev-server.js] (webpack)/hot/dev-server.js 1.59 KiB {main} [built]
+[./src/index.tsx] 1.17 KiB {main} [built]
+    + 270 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+    [./node_modules/html-webpack-plugin/lib/loader.js!./index.html] 526 bytes {0} [built]
+    [./node_modules/lodash/lodash.js] 530 KiB {0} [built]
+    [./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {0} [built]
+    [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 497 bytes {0} [built]
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 9722da59a746bd3df928
+Version: webpack 4.41.5
+Time: 185ms
+Built at: 09/15/2020 6:29:01 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   ee298bfa20a9968560b6.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.ee298bfa20a9968560b6.hot-update.js   2.57 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.ee298bfa20a9968560b6.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/components/InfoTooltip/InfoTooltip.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/components/InfoTooltip/InfoTooltip.style.css 1.59 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: e78964f7567e3ee84967
+Version: webpack 4.41.5
+Time: 115ms
+Built at: 09/15/2020 6:29:14 PM
+                               Asset       Size  Chunks                               Chunk Names
+9722da59a746bd3df928.hot-update.json   35 bytes          [emitted] [immutable] [hmr]  
+                       app.config.js   47 bytes          [emitted]                    
+                         favicon.ico    361 KiB          [emitted]                    
+                     index.bundle.js   2.03 MiB    main  [emitted]                    main
+                          index.html  426 bytes          [emitted]                    
+ + 11 hidden assets
+Entrypoint main = index.bundle.js
+[./node_modules/css-loader/dist/cjs.js?!./src/components/InfoTooltip/InfoTooltip.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/components/InfoTooltip/InfoTooltip.style.css 1.59 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: a16f606f7e13ae717db6
+Version: webpack 4.41.5
+Time: 153ms
+Built at: 09/15/2020 6:30:37 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   e78964f7567e3ee84967.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.e78964f7567e3ee84967.hot-update.js   2.67 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.e78964f7567e3ee84967.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/components/InfoTooltip/InfoTooltip.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/components/InfoTooltip/InfoTooltip.style.css 1.68 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: e7588d1c49810bed43c2
+Version: webpack 4.41.5
+Time: 105ms
+Built at: 09/15/2020 6:31:53 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   a16f606f7e13ae717db6.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.a16f606f7e13ae717db6.hot-update.js   2.85 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.a16f606f7e13ae717db6.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/components/InfoTooltip/InfoTooltip.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/components/InfoTooltip/InfoTooltip.style.css 1.84 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 40f8d7b7f3b574021d84
+Version: webpack 4.41.5
+Time: 302ms
+Built at: 09/15/2020 6:32:27 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   e7588d1c49810bed43c2.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.e7588d1c49810bed43c2.hot-update.js   2.89 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.e7588d1c49810bed43c2.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/components/InfoTooltip/InfoTooltip.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/components/InfoTooltip/InfoTooltip.style.css 1.88 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: e9af0875c23aa74276bd
+Version: webpack 4.41.5
+Time: 129ms
+Built at: 09/15/2020 6:34:43 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   40f8d7b7f3b574021d84.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.40f8d7b7f3b574021d84.hot-update.js   2.77 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.40f8d7b7f3b574021d84.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/components/InfoTooltip/InfoTooltip.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/components/InfoTooltip/InfoTooltip.style.css 1.77 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 886a815389f88a3c7e26
+Version: webpack 4.41.5
+Time: 986ms
+Built at: 09/15/2020 6:35:01 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   e9af0875c23aa74276bd.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.e9af0875c23aa74276bd.hot-update.js   1.52 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.e9af0875c23aa74276bd.hot-update.js
+[./src/components/InfoTooltip/InfoTooltip.tsx] 847 bytes {main} [built]
+[./src/components/InfoTooltip/InfoTooltip.view.tsx] 875 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 89dab318d875ee5a35ae
+Version: webpack 4.41.5
+Time: 380ms
+Built at: 09/15/2020 6:36:00 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   886a815389f88a3c7e26.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.886a815389f88a3c7e26.hot-update.js    2.9 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.886a815389f88a3c7e26.hot-update.js
+[./src/components/InfoTooltip/InfoTooltip.tsx] 847 bytes {main} [built]
+[./src/components/InfoTooltip/InfoTooltip.view.tsx] 878 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 13c5cd63ae5906452afc
+Version: webpack 4.41.5
+Time: 155ms
+Built at: 09/15/2020 6:36:19 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   89dab318d875ee5a35ae.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.89dab318d875ee5a35ae.hot-update.js    1.4 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.89dab318d875ee5a35ae.hot-update.js
+[./src/components/InfoTooltip/InfoTooltip.tsx] 847 bytes {main} [built]
+[./src/components/InfoTooltip/InfoTooltip.view.tsx] 878 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 04dbf68712be1021fe84
+Version: webpack 4.41.5
+Time: 529ms
+Built at: 09/15/2020 6:36:33 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   13c5cd63ae5906452afc.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.13c5cd63ae5906452afc.hot-update.js   1.53 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.13c5cd63ae5906452afc.hot-update.js
+[./src/components/InfoTooltip/InfoTooltip.tsx] 847 bytes {main} [built]
+[./src/components/InfoTooltip/InfoTooltip.view.tsx] 877 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[31m✖[39m [90m｢wdm｣[39m: Hash: bb27d32585cd74b3ae75
+Version: webpack 4.41.5
+Time: 371ms
+Built at: 09/15/2020 6:41:25 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   04dbf68712be1021fe84.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.04dbf68712be1021fe84.hot-update.js   3.08 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.04dbf68712be1021fe84.hot-update.js
+[./src/components/InfoTooltip/InfoTooltip.tsx] 847 bytes {main} [built]
+[./src/components/InfoTooltip/InfoTooltip.view.tsx] 1.03 KiB {main} [built] [2 errors]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+
+ERROR in /home/alewkinr/tech/js/clientapp/src/components/InfoTooltip/InfoTooltip.view.tsx
+./src/components/InfoTooltip/InfoTooltip.view.tsx
+[tsl] ERROR in /home/alewkinr/tech/js/clientapp/src/components/InfoTooltip/InfoTooltip.view.tsx(10,8)
+      TS1155: 'const' declarations must be initialized.
+
+ERROR in /home/alewkinr/tech/js/clientapp/src/components/InfoTooltip/InfoTooltip.view.tsx
+./src/components/InfoTooltip/InfoTooltip.view.tsx
+[tsl] ERROR in /home/alewkinr/tech/js/clientapp/src/components/InfoTooltip/InfoTooltip.view.tsx(20,17)
+      TS2588: Cannot assign to 'infoButton' because it is a constant.
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Failed to compile.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 136e4e79c6c1db26a9f2
+Version: webpack 4.41.5
+Time: 475ms
+Built at: 09/15/2020 6:43:58 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   bb27d32585cd74b3ae75.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.bb27d32585cd74b3ae75.hot-update.js    2.9 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.bb27d32585cd74b3ae75.hot-update.js
+[./src/components/InfoTooltip/InfoTooltip.tsx] 847 bytes {main} [built]
+[./src/components/InfoTooltip/InfoTooltip.view.tsx] 877 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: f84b475cd4fb1f2a831a
+Version: webpack 4.41.5
+Time: 286ms
+Built at: 09/15/2020 6:44:03 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   136e4e79c6c1db26a9f2.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.136e4e79c6c1db26a9f2.hot-update.js   2.88 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.136e4e79c6c1db26a9f2.hot-update.js
+[./src/components/InfoTooltip/InfoTooltip.tsx] 847 bytes {main} [built]
+[./src/components/InfoTooltip/InfoTooltip.view.tsx] 860 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 11c57fddd7059ea4c666
+Version: webpack 4.41.5
+Time: 125ms
+Built at: 09/15/2020 6:44:06 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   f84b475cd4fb1f2a831a.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.f84b475cd4fb1f2a831a.hot-update.js    1.4 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.f84b475cd4fb1f2a831a.hot-update.js
+[./src/components/InfoTooltip/InfoTooltip.tsx] 847 bytes {main} [built]
+[./src/components/InfoTooltip/InfoTooltip.view.tsx] 860 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 775bd75f2fd532bb8393
+Version: webpack 4.41.5
+Time: 393ms
+Built at: 09/15/2020 6:45:05 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   11c57fddd7059ea4c666.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.11c57fddd7059ea4c666.hot-update.js   1.53 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.11c57fddd7059ea4c666.hot-update.js
+[./src/components/InfoTooltip/InfoTooltip.tsx] 847 bytes {main} [built]
+[./src/components/InfoTooltip/InfoTooltip.view.tsx] 879 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 81102e7c8ad41843f8ae
+Version: webpack 4.41.5
+Time: 154ms
+Built at: 09/15/2020 6:45:23 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   775bd75f2fd532bb8393.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.775bd75f2fd532bb8393.hot-update.js   2.91 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.775bd75f2fd532bb8393.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/components/InfoTooltip/InfoTooltip.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/components/InfoTooltip/InfoTooltip.style.css 1.89 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: e0818a5ec167613e496b
+Version: webpack 4.41.5
+Time: 128ms
+Built at: 09/15/2020 6:46:03 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   81102e7c8ad41843f8ae.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.81102e7c8ad41843f8ae.hot-update.js   2.77 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.81102e7c8ad41843f8ae.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/components/InfoTooltip/InfoTooltip.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/components/InfoTooltip/InfoTooltip.style.css 1.77 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 22e641ff448b489e5202
+Version: webpack 4.41.5
+Time: 290ms
+Built at: 09/15/2020 6:46:08 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   e0818a5ec167613e496b.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.e0818a5ec167613e496b.hot-update.js   2.88 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.e0818a5ec167613e496b.hot-update.js
+[./src/components/InfoTooltip/InfoTooltip.tsx] 847 bytes {main} [built]
+[./src/components/InfoTooltip/InfoTooltip.view.tsx] 860 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 1796af5037fa65e29c0d
+Version: webpack 4.41.5
+Time: 80ms
+Built at: 09/15/2020 6:47:47 PM
+                               Asset       Size  Chunks                               Chunk Names
+22e641ff448b489e5202.hot-update.json   35 bytes          [emitted] [immutable] [hmr]  
+                       app.config.js   47 bytes          [emitted]                    
+                         favicon.ico    361 KiB          [emitted]                    
+                     index.bundle.js   2.03 MiB    main  [emitted]                    main
+                          index.html  426 bytes          [emitted]                    
+                            info.svg  559 bytes          [emitted]                    
+ + 10 hidden assets
+Entrypoint main = index.bundle.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/contents/info.svg] 52 bytes {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 24f51b9b4d01e1709e15
+Version: webpack 4.41.5
+Time: 505ms
+Built at: 09/15/2020 6:48:32 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   1796af5037fa65e29c0d.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.1796af5037fa65e29c0d.hot-update.js   1.74 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.1796af5037fa65e29c0d.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 879 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 9971bbebb20c529a0f2e
+Version: webpack 4.41.5
+Time: 324ms
+Built at: 09/15/2020 6:49:11 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   24f51b9b4d01e1709e15.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.24f51b9b4d01e1709e15.hot-update.js   3.53 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.24f51b9b4d01e1709e15.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 936 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 1b119ce46b6cd65b977e
+Version: webpack 4.41.5
+Time: 340ms
+Built at: 09/15/2020 6:49:39 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   9971bbebb20c529a0f2e.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.9971bbebb20c529a0f2e.hot-update.js   3.86 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.9971bbebb20c529a0f2e.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.2 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 8eda830f9b484af9a499
+Version: webpack 4.41.5
+Time: 286ms
+Built at: 09/15/2020 6:49:52 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   1b119ce46b6cd65b977e.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.1b119ce46b6cd65b977e.hot-update.js   3.88 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.1b119ce46b6cd65b977e.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.22 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 46673dc9304b56606965
+Version: webpack 4.41.5
+Time: 524ms
+Built at: 09/15/2020 6:50:42 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   8eda830f9b484af9a499.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.8eda830f9b484af9a499.hot-update.js   1.67 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.8eda830f9b484af9a499.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/ForecastPeriod/ForecastPeriod.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/ForecastPeriod/ForecastPeriod.view.tsx] 803 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 821497480b9f3f051159
+Version: webpack 4.41.5
+Time: 97ms
+Built at: 09/15/2020 6:51:10 PM
+                               Asset       Size  Chunks                               Chunk Names
+46673dc9304b56606965.hot-update.json   35 bytes          [emitted] [immutable] [hmr]  
+                       app.config.js   47 bytes          [emitted]                    
+                         favicon.ico    361 KiB          [emitted]                    
+                     index.bundle.js   2.03 MiB    main  [emitted]                    main
+                          index.html  426 bytes          [emitted]                    
+ + 11 hidden assets
+Entrypoint main = index.bundle.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/ForecastPeriod/contents/info.svg] 52 bytes {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: d59a939755c7f164c6fe
+Version: webpack 4.41.5
+Time: 78ms
+Built at: 09/15/2020 6:51:16 PM
+                               Asset       Size  Chunks                               Chunk Names
+821497480b9f3f051159.hot-update.json   35 bytes          [emitted] [immutable] [hmr]  
+                       app.config.js   47 bytes          [emitted]                    
+                         favicon.ico    361 KiB          [emitted]                    
+                     index.bundle.js   2.03 MiB    main  [emitted]                    main
+                          index.html  426 bytes          [emitted]                    
+ + 11 hidden assets
+Entrypoint main = index.bundle.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/ForecastPeriod/contents/info.svg] 52 bytes {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 37aa4f10335b4accec0e
+Version: webpack 4.41.5
+Time: 115ms
+Built at: 09/15/2020 6:51:28 PM
+                               Asset       Size  Chunks                               Chunk Names
+                       app.config.js   47 bytes          [emitted]                    
+d59a939755c7f164c6fe.hot-update.json   35 bytes          [emitted] [immutable] [hmr]  
+                         favicon.ico    361 KiB          [emitted]                    
+                     index.bundle.js   2.03 MiB    main  [emitted]                    main
+                          index.html  426 bytes          [emitted]                    
+ + 11 hidden assets
+Entrypoint main = index.bundle.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/contents/info.svg] 52 bytes {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 52a82bc79e9dd534c421
+Version: webpack 4.41.5
+Time: 643ms
+Built at: 09/15/2020 6:51:40 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   37aa4f10335b4accec0e.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.37aa4f10335b4accec0e.hot-update.js   1.78 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.37aa4f10335b4accec0e.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.tsx] 867 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx] 904 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[31m✖[39m [90m｢wdm｣[39m: Hash: 0d357cfb12a724392a8c
+Version: webpack 4.41.5
+Time: 270ms
+Built at: 09/15/2020 6:52:05 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   52a82bc79e9dd534c421.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.52a82bc79e9dd534c421.hot-update.js   3.76 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.52a82bc79e9dd534c421.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.tsx] 867 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx] 1.13 KiB {main} [built] [2 errors]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+
+ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx
+./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx
+[tsl] ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx(10,5)
+      TS2304: Cannot find name 'InfoTooltip'.
+
+ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx
+./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx
+[tsl] ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx(10,83)
+      TS2304: Cannot find name 'InfoTooltip'.
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Failed to compile.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[31m✖[39m [90m｢wdm｣[39m: Hash: 860d51079986e4cdeb0b
+Version: webpack 4.41.5
+Time: 285ms
+Built at: 09/15/2020 6:52:13 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   0d357cfb12a724392a8c.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.0d357cfb12a724392a8c.hot-update.js    3.8 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.0d357cfb12a724392a8c.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.tsx] 867 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx] 1.16 KiB {main} [built] [2 errors]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+
+ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx
+./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx
+[tsl] ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx(10,5)
+      TS2304: Cannot find name 'InfoTooltip'.
+
+ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx
+./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx
+[tsl] ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx(10,85)
+      TS2304: Cannot find name 'InfoTooltip'.
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Failed to compile.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: a088e6d613bc5102748d
+Version: webpack 4.41.5
+Time: 488ms
+Built at: 09/15/2020 6:52:52 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   860d51079986e4cdeb0b.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.860d51079986e4cdeb0b.hot-update.js   3.95 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.860d51079986e4cdeb0b.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.tsx] 867 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx] 1.25 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: ea2acf95adaef9298b50
+Version: webpack 4.41.5
+Time: 421ms
+Built at: 09/15/2020 6:53:43 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   a088e6d613bc5102748d.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.a088e6d613bc5102748d.hot-update.js   3.31 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.a088e6d613bc5102748d.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/ForecastPeriod/ForecastPeriod.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/ForecastPeriod/ForecastPeriod.view.tsx] 774 bytes {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 41abeeeb0e44b9daa908
+Version: webpack 4.41.5
+Time: 238ms
+Built at: 09/15/2020 6:53:51 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   ea2acf95adaef9298b50.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.ea2acf95adaef9298b50.hot-update.js   3.94 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.ea2acf95adaef9298b50.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.tsx] 867 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx] 1.24 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: edf68b536cd62effd5cb
+Version: webpack 4.41.5
+Time: 223ms
+Built at: 09/15/2020 6:53:53 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   41abeeeb0e44b9daa908.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.41abeeeb0e44b9daa908.hot-update.js   3.94 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.41abeeeb0e44b9daa908.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.tsx] 867 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/DepositingFunds/DepositingFunds.view.tsx] 1.24 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 311792614147130d4bad
+Version: webpack 4.41.5
+Time: 304ms
+Built at: 09/15/2020 6:54:18 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   edf68b536cd62effd5cb.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.edf68b536cd62effd5cb.hot-update.js   3.86 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.edf68b536cd62effd5cb.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.2 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 9fc623cd642d16d1414c
+Version: webpack 4.41.5
+Time: 263ms
+Built at: 09/15/2020 6:54:29 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   311792614147130d4bad.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.311792614147130d4bad.hot-update.js   3.86 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.311792614147130d4bad.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.2 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 712bd64eb6f9643c0858
+Version: webpack 4.41.5
+Time: 352ms
+Built at: 09/15/2020 6:55:32 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   9fc623cd642d16d1414c.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.9fc623cd642d16d1414c.hot-update.js   3.92 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.9fc623cd642d16d1414c.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.26 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 44c259d24e2a5e8ab550
+Version: webpack 4.41.5
+Time: 457ms
+Built at: 09/15/2020 6:55:56 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   712bd64eb6f9643c0858.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.712bd64eb6f9643c0858.hot-update.js   3.98 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.712bd64eb6f9643c0858.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.32 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 514f693227fd3c623aac
+Version: webpack 4.41.5
+Time: 122ms
+Built at: 09/15/2020 6:56:11 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   44c259d24e2a5e8ab550.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.44c259d24e2a5e8ab550.hot-update.js   5.23 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.44c259d24e2a5e8ab550.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css 3.71 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: e56de9341d86af7c7f7a
+Version: webpack 4.41.5
+Time: 152ms
+Built at: 09/15/2020 6:56:32 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   514f693227fd3c623aac.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.514f693227fd3c623aac.hot-update.js    1.7 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.514f693227fd3c623aac.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.32 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 145edc4b9c93c5e9e0a7
+Version: webpack 4.41.5
+Time: 121ms
+Built at: 09/15/2020 6:56:47 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   e56de9341d86af7c7f7a.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.e56de9341d86af7c7f7a.hot-update.js   5.27 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.e56de9341d86af7c7f7a.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css 3.75 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[31m✖[39m [90m｢wdm｣[39m: Hash: ba14e11d0c79cbb954cb
+Version: webpack 4.41.5
+Time: 380ms
+Built at: 09/15/2020 6:57:48 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   145edc4b9c93c5e9e0a7.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.145edc4b9c93c5e9e0a7.hot-update.js   2.31 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.145edc4b9c93c5e9e0a7.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.32 KiB {main} [built] [2 errors]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+
+ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx
+./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx
+[tsl] ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx(11,9)
+      TS2559: Type 'number' has no properties in common with type 'CSSProperties'.
+
+ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx
+./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx
+[tsl] ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx(11,35)
+      TS2304: Cannot find name 'title'.
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Failed to compile.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: c7aa15ae1baf14bda2fa
+Version: webpack 4.41.5
+Time: 267ms
+Built at: 09/15/2020 6:57:54 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   ba14e11d0c79cbb954cb.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.ba14e11d0c79cbb954cb.hot-update.js   3.98 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.ba14e11d0c79cbb954cb.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.32 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[34mℹ[39m [90m｢wdm｣[39m: wait until bundle finished: /tinkoff.png
+[33m⚠[39m [90m｢wdm｣[39m: Hash: ea0c39699277cb7522f9
+Version: webpack 4.41.5
+Time: 213ms
+Built at: 09/15/2020 6:58:00 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   c7aa15ae1baf14bda2fa.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.c7aa15ae1baf14bda2fa.hot-update.js   3.98 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.c7aa15ae1baf14bda2fa.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.32 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 89b79ea8f3081d10bef1
+Version: webpack 4.41.5
+Time: 106ms
+Built at: 09/15/2020 6:58:08 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   ea0c39699277cb7522f9.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.ea0c39699277cb7522f9.hot-update.js    5.2 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.ea0c39699277cb7522f9.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css 3.68 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[34mℹ[39m [90m｢wdm｣[39m: wait until bundle finished: /
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 93401c2070b47fc64b37
+Version: webpack 4.41.5
+Time: 224ms
+Built at: 09/15/2020 6:58:24 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   89b79ea8f3081d10bef1.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.89b79ea8f3081d10bef1.hot-update.js   3.98 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.89b79ea8f3081d10bef1.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.32 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[34mℹ[39m [90m｢wdm｣[39m: wait until bundle finished: /info.svg
+[34mℹ[39m [90m｢wdm｣[39m: wait until bundle finished: /ruble.svg
+[34mℹ[39m [90m｢wdm｣[39m: wait until bundle finished: /minus.control.svg
+[34mℹ[39m [90m｢wdm｣[39m: wait until bundle finished: /ruble.black.svg
+[34mℹ[39m [90m｢wdm｣[39m: wait until bundle finished: /dog-mail.svg
+[34mℹ[39m [90m｢wdm｣[39m: wait until bundle finished: /plus.control.svg
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 058c0873edca5cc69f67
+Version: webpack 4.41.5
+Time: 139ms
+Built at: 09/15/2020 6:58:31 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   93401c2070b47fc64b37.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.93401c2070b47fc64b37.hot-update.js   5.27 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.93401c2070b47fc64b37.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css 3.75 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 77d5b97e506bcb4ec953
+Version: webpack 4.41.5
+Time: 156ms
+Built at: 09/15/2020 6:58:57 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   058c0873edca5cc69f67.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.058c0873edca5cc69f67.hot-update.js   5.35 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.058c0873edca5cc69f67.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css 3.83 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: b7cbd646b7d879a5e5e6
+Version: webpack 4.41.5
+Time: 432ms
+Built at: 09/15/2020 7:00:07 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   77d5b97e506bcb4ec953.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.77d5b97e506bcb4ec953.hot-update.js   3.98 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.77d5b97e506bcb4ec953.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.31 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 044bf997a95e68ae6fce
+Version: webpack 4.41.5
+Time: 100ms
+Built at: 09/15/2020 7:00:17 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   b7cbd646b7d879a5e5e6.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.b7cbd646b7d879a5e5e6.hot-update.js   5.26 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.b7cbd646b7d879a5e5e6.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css 3.74 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 3b918352fcb86c130bdd
+Version: webpack 4.41.5
+Time: 386ms
+Built at: 09/15/2020 7:01:03 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   044bf997a95e68ae6fce.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.044bf997a95e68ae6fce.hot-update.js   3.98 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.044bf997a95e68ae6fce.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.31 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 02cf628cd38cf926c58d
+Version: webpack 4.41.5
+Time: 291ms
+Built at: 09/15/2020 7:05:49 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   3b918352fcb86c130bdd.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.3b918352fcb86c130bdd.hot-update.js   3.86 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.3b918352fcb86c130bdd.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.view.tsx] 1.2 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 65bf68d5c17a2f0850bc
+Version: webpack 4.41.5
+Time: 156ms
+Built at: 09/15/2020 7:05:50 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   02cf628cd38cf926c58d.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.02cf628cd38cf926c58d.hot-update.js    1.7 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.02cf628cd38cf926c58d.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.tsx] 862 bytes {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 92ecc6efc85413bd9989
+Version: webpack 4.41.5
+Time: 100ms
+Built at: 09/15/2020 7:06:00 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   65bf68d5c17a2f0850bc.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.65bf68d5c17a2f0850bc.hot-update.js      5 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.65bf68d5c17a2f0850bc.hot-update.js
+[./node_modules/css-loader/dist/cjs.js?!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css] ./node_modules/css-loader/dist/cjs.js??ref--8-1!./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/OriginalAmount/OriginalAmount.style.css 3.5 KiB {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[31m✖[39m [90m｢wdm｣[39m: Hash: 4c718205d6bec029f902
+Version: webpack 4.41.5
+Time: 285ms
+Built at: 09/15/2020 7:07:24 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   92ecc6efc85413bd9989.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.92ecc6efc85413bd9989.hot-update.js   3.34 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.92ecc6efc85413bd9989.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.tsx] 832 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx] 2.39 KiB {main} [built] [1 error]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+
+ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx
+./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx
+[tsl] ERROR in /home/alewkinr/tech/js/clientapp/src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx(15,7)
+      TS2304: Cannot find name 'InfoTooltip'.
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Failed to compile.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: ed1d02831094c4a541c0
+Version: webpack 4.41.5
+Time: 511ms
+Built at: 09/15/2020 7:07:47 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   4c718205d6bec029f902.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.4c718205d6bec029f902.hot-update.js   5.06 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.4c718205d6bec029f902.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.tsx] 832 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx] 2.48 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: c5ff7e6cb559e5f2c039
+Version: webpack 4.41.5
+Time: 304ms
+Built at: 09/15/2020 7:08:11 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   ed1d02831094c4a541c0.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.ed1d02831094c4a541c0.hot-update.js   5.79 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.ed1d02831094c4a541c0.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.tsx] 832 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx] 3.11 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: ad96146664406579f2be
+Version: webpack 4.41.5
+Time: 125ms
+Built at: 09/15/2020 7:08:17 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   c5ff7e6cb559e5f2c039.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.c5ff7e6cb559e5f2c039.hot-update.js    1.6 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.c5ff7e6cb559e5f2c039.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.tsx] 832 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx] 3.11 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 71655ccd34fd1739c7e8
+Version: webpack 4.41.5
+Time: 329ms
+Built at: 09/15/2020 7:09:08 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   ad96146664406579f2be.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.ad96146664406579f2be.hot-update.js   4.22 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.ad96146664406579f2be.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.tsx] 832 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx] 3.11 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: a4d21ffe890113a19986
+Version: webpack 4.41.5
+Time: 482ms
+Built at: 09/15/2020 7:09:40 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   71655ccd34fd1739c7e8.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.71655ccd34fd1739c7e8.hot-update.js   5.79 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.71655ccd34fd1739c7e8.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.tsx] 832 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx] 3.11 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 8f44f61ff9a14e5779c4
+Version: webpack 4.41.5
+Time: 332ms
+Built at: 09/15/2020 7:09:54 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   a4d21ffe890113a19986.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.a4d21ffe890113a19986.hot-update.js    5.8 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.a4d21ffe890113a19986.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.tsx] 832 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx] 3.12 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 4a5b58ecca867bb39b3b
+Version: webpack 4.41.5
+Time: 421ms
+Built at: 09/15/2020 7:09:56 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   8f44f61ff9a14e5779c4.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.8f44f61ff9a14e5779c4.hot-update.js    5.8 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.8f44f61ff9a14e5779c4.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.tsx] 832 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx] 3.12 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: dbecba5ba2a474b6ef16
+Version: webpack 4.41.5
+Time: 228ms
+Built at: 09/15/2020 7:10:11 PM
+                                  Asset       Size  Chunks                               Chunk Names
+   4a5b58ecca867bb39b3b.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                          app.config.js   47 bytes          [emitted]                    
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.4a5b58ecca867bb39b3b.hot-update.js    5.8 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.4a5b58ecca867bb39b3b.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.tsx] 832 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx] 3.12 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: d3a666a56e51955a3116
+Version: webpack 4.41.5
+Time: 297ms
+Built at: 09/15/2020 7:10:37 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   dbecba5ba2a474b6ef16.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.dbecba5ba2a474b6ef16.hot-update.js   5.79 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.dbecba5ba2a474b6ef16.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.tsx] 832 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx] 3.12 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: e2aa16a14bd15380fa82
+Version: webpack 4.41.5
+Time: 303ms
+Built at: 09/15/2020 7:10:54 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   d3a666a56e51955a3116.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.d3a666a56e51955a3116.hot-update.js    5.8 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.d3a666a56e51955a3116.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.tsx] 832 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/Settings.view.tsx] 3.12 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: ec1ea644dc553281cf2b
+Version: webpack 4.41.5
+Time: 90ms
+Built at: 09/15/2020 7:11:22 PM
+                               Asset       Size  Chunks                               Chunk Names
+                       app.config.js   47 bytes          [emitted]                    
+e2aa16a14bd15380fa82.hot-update.json   35 bytes          [emitted] [immutable] [hmr]  
+                         favicon.ico    361 KiB          [emitted]                    
+                     index.bundle.js   2.03 MiB    main  [emitted]                    main
+                          index.html  426 bytes          [emitted]                    
+                            info.svg  559 bytes          [emitted]                    
+ + 10 hidden assets
+Entrypoint main = index.bundle.js
+[./src/pages/Home/childs/Sidebar/childs/ControlPanel/childs/Settings/contents/info.svg] 52 bytes {main} [built]
+    + 284 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: ccf4a8e80e9b520037be
+Version: webpack 4.41.5
+Time: 398ms
+Built at: 09/15/2020 7:11:52 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   ec1ea644dc553281cf2b.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.ec1ea644dc553281cf2b.hot-update.js   3.03 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.ec1ea644dc553281cf2b.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/Portfolio/Portfolio.tsx] 837 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/Portfolio/Portfolio.view.tsx] 2.02 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.
+[34mℹ[39m [90m｢wdm｣[39m: Compiling...
+[33m⚠[39m [90m｢wdm｣[39m: Hash: 23aca146465b9923f4d9
+Version: webpack 4.41.5
+Time: 263ms
+Built at: 09/15/2020 7:12:11 PM
+                                  Asset       Size  Chunks                               Chunk Names
+                          app.config.js   47 bytes          [emitted]                    
+   ccf4a8e80e9b520037be.hot-update.json   46 bytes          [emitted] [immutable] [hmr]  
+                            favicon.ico    361 KiB          [emitted]                    
+                        index.bundle.js   2.03 MiB    main  [emitted]                    main
+                             index.html  426 bytes          [emitted]                    
+main.ccf4a8e80e9b520037be.hot-update.js   4.49 KiB    main  [emitted] [immutable] [hmr]  main
+ + 11 hidden assets
+Entrypoint main = index.bundle.js main.ccf4a8e80e9b520037be.hot-update.js
+[./src/pages/Home/childs/Sidebar/childs/Portfolio/Portfolio.tsx] 837 bytes {main} [built]
+[./src/pages/Home/childs/Sidebar/childs/Portfolio/Portfolio.view.tsx] 2.02 KiB {main} [built]
+    + 283 hidden modules
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename info.svg
+
+WARNING in Conflict: Multiple assets emit different content to the same filename ruble.svg
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+       4 modules
+[34mℹ[39m [90m｢wdm｣[39m: Compiled with warnings.

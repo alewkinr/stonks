@@ -1,0 +1,28 @@
+.info {
+	width: 10px;
+	height: 10px;
+	background-image: url(./contents/info.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}
+
+a:link {
+	text-decoration: underline;
+	color: white;
+}
+
+a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: white;
+}
+
+a:active {
+	text-decoration: underline;
+	color: white;
+}

@@ -13,12 +13,12 @@ export const PortfolioView: React.FC<PortfolioProps> = (props) => {
     return (
         <div className={styles.container}>
             <div className={styles.containerRow}>
-                <div className={styles.label}>{"Портфель"}</div>
+                <div className={styles.label}>{"Состав портфеля"}</div>
             </div>
             <InformationOnFunds />
             <Scrollbars autoHide style={{ width: "100%", height: "420px" }}>
                 <div className={styles.bonds}>
-                    {array.map((_, index) => <Bond key={index} /> )}
+                    {array.map((_, index) => <Bond key={index} />)}
                 </div>
             </Scrollbars>
         </div>

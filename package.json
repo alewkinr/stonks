@@ -44,7 +44,8 @@
     "react-google-charts": "^3.0.15",
     "react-modal": "^3.11.2",
     "react-redux": "^7.2.1",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "react-tooltip": "^4.2.10"
   },
   "scripts": {
     "dev": "webpack-dev-server --mode development --open --hot",

@@ -16,12 +16,3 @@
 .title > * + * {
 	margin-left: 5px;
 }
-
-.info {
-	width: 10px;
-	height: 10px;
-	background-image: url(./contents/info.svg);
-	background-repeat: no-repeat;
-	background-size: contain;
-	cursor: pointer;
-}
