@@ -31,14 +31,15 @@
 .value {
 	display: flex;
 	align-items: center;
-	font-size: 24px;
+	font-size: 18px;
+	outline: none;
 }
 
 .value:after {
 	content: "";
 	display: block;
-	width: 16px;
-	height: 16px;
+	width: 14px;
+	height: 14px;
 	background-image: url(./contents/ruble.svg);
 	background-repeat: no-repeat;
 	background-size: contain;

@@ -7,7 +7,7 @@ export const account = (state = initState, action: Actions): State => {
 		case Keys.SET_ACCOUNT_TYPE:
 			return {...state, accountType: action.accountType}
 		case Keys.SET_ORIGIN_AMOUNT:
-			return {...state, originAmount: action.originAmount}
+			return {...state, originalAmount: action.originalAmount}
 		default:
 			return state;
 	}

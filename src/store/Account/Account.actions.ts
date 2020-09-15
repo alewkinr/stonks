@@ -10,9 +10,9 @@ export const setAccountType = (accountType: AccountType) => {
 	} as const;
 }
 
-export const setOriginAmount = (originAmount: string) => {
+export const setOriginalAmount = (originalAmount: string) => {
 	return {
 		type: Keys.SET_ORIGIN_AMOUNT,
-		originAmount,
+		originalAmount,
 	} as const;
 }
