@@ -37,3 +37,9 @@ const _hasBondIdAsKey = (bondsStoreObj: { [instrumentId: string]: any }, _id: st
 export const IsBondIncludedInPortfolio = (bonds: { [instrumentId: string]: any }, instrumentId: string): boolean => {
   return _hasBondIdAsKey(bonds, instrumentId)
 }
+
+
+// CalculateBondsCost - вычисляем номинальную стоимость пачки бондов 
+export const CalculateBondsCost = (bond: Bond, amount: number): number => {
+  return Number(bond.notional) * amount
+}

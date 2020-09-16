@@ -3,7 +3,7 @@ import React from "react";
 import { BondProps } from "./Bond";
 
 export const BondView: React.FC<BondProps> = (props) => {
-	const { issuerTitle, logoUrl, amount } = props;
+	const { issuerTitle, logoUrl, amount, fullPrice } = props;
 
 	const { onIncrement, onDecrement } = props;
 
@@ -27,7 +27,7 @@ export const BondView: React.FC<BondProps> = (props) => {
 							onClick={() => { onIncrement() }}
 						/>
 					</div>
-					<div className={styles.fullPrice}>{"32 487"}</div>
+					<div className={styles.fullPrice}>{fullPrice}</div>
 				</div>
 			</div>
 			{

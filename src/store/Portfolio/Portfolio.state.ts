@@ -1,8 +1,14 @@
 import { Bond } from "../../common/types";
 
 export type State = {
-	bonds: { [instrumentId: string]: Bond },
-	portfolio: { [instrumentId: string]: number },
+	// список всех облигаций
+	bonds: { [instrumentId: string]: Bond };
+
+	// структура портфолио облигаций в виде id => amount
+	portfolio: { [instrumentId: string]: number };
+
+	// структуру сумм портфолио в виде id => price
+	cost: Map<string, number>;
 };
 
 // Загружаем бонды из json-чика
@@ -11,10 +17,13 @@ bonds.map(bond => Bond.deserialize(bond));
 
 // Инициализируем портфолио с пустыми облигациями 
 let portfolio: { [instrumentId: string]: number } = {};
+let cost: Map<string, number> = new Map();
 bonds.forEach((bond: Bond) => {
 	portfolio = {
 		...portfolio, ...{ [bond.instrumentId]: 0 }
 	}
+
+	cost.set(bond.instrumentId, Number(bond.notional))
 });
 
 // Трансформируем данные в нужынй вид
@@ -28,4 +37,5 @@ bonds.reduce(
 export const initState: State = {
 	bonds,
 	portfolio,
+	cost,
 };

@@ -13,6 +13,7 @@ import { Bond } from "../../../../../../common/types";
 type PortfolioState = {
 	bonds: { [instrumentId: string]: Bond };
 	portfolio: { [instrumentId: number]: number };
+	cost: Map<string, number>;
 };
 
 type PortfolioDispatch = {
@@ -28,9 +29,9 @@ const Portfolio: React.FC<PortfolioProps> = (props) => {
 }
 
 const mapStateToProps = (state: AppState): PortfolioState => {
-	let { bonds, portfolio } = state.portfolio;
+	let { bonds, portfolio, cost } = state.portfolio;
 
-	return { bonds, portfolio }
+	return { bonds, portfolio, cost }
 }
 
 const mapDispatchToProps: PortfolioDispatch = {

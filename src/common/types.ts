@@ -6,8 +6,7 @@ export class BondPayment {
 
     constructor(
         private readonly _date: Date,
-        private readonly _payment: number)
-    {
+        private readonly _payment: number) {
         this._date = _date;
         this._payment = _payment;
     }
@@ -28,8 +27,7 @@ export class Bond {
         private readonly _couponAnnualPercent: number,
         private readonly _couponCost: number,
         private readonly _couponPeriod: number,
-        private readonly _couponCalendar: Array<BondPayment>)
-    {
+        private readonly _couponCalendar: Array<BondPayment>) {
         this._instrumentId = _instrumentId;
         this._shortName = _shortName;
         this._name = _name;
@@ -67,7 +65,7 @@ export class Bond {
 
     get notional(): string {
         let ccy;
-        switch(this._currency) {
+        switch (this._currency) {
             case Currency.RUB:
                 ccy = "₽"
                 break;

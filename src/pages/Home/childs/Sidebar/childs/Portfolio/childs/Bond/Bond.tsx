@@ -5,6 +5,7 @@ type BondState = {
 	issuerTitle: String;
 	logoUrl: String;
 	amount: number;
+	fullPrice: number;
 	onIncrement: Function;
 	onDecrement: Function;
 };
