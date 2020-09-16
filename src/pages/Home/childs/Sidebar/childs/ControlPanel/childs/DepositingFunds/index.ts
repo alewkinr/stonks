@@ -1,3 +1,3 @@
-import { DepositingFunds } from "./DepositingFunds";
+import DepositingFunds from "./DepositingFunds";
 
 export { DepositingFunds };

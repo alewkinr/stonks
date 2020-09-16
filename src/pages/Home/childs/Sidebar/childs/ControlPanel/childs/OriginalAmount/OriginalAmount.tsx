@@ -5,27 +5,27 @@ import { setOriginalAmount } from "../../../../../../../../store/Account/Account
 import { OriginalAmountView } from "./OriginalAmount.view";
 
 type OriginalAmountState = {
-	originAmount: string;
+    originAmount: string;
 };
 
 type OriginalAmountDispatch = {
-	setOriginalAmount: typeof setOriginalAmount;
-}
+    setOriginalAmount: typeof setOriginalAmount;
+};
 
 export type OriginalAmountProps = OriginalAmountState & OriginalAmountDispatch;
 
 const OriginalAmount: React.FC<OriginalAmountProps> = (props) => {
-	return <OriginalAmountView {...props} />
-}
+    return <OriginalAmountView {...props} />;
+};
 
 const mapStateToProps = (state: AppState): OriginalAmountState => {
-	const {originalAmount: originAmount} = state.account;
+    const { originalAmount: originAmount } = state.account;
 
-	return {originAmount};
-}
+    return { originAmount };
+};
 
 const mapDispatchToProps: OriginalAmountDispatch = {
-	setOriginalAmount,
-}
+    setOriginalAmount,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(OriginalAmount);
