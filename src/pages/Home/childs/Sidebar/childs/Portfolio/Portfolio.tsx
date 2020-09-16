@@ -1,13 +1,14 @@
 import React from "react";
-import { Bond } from "../../../../../../common/types";
+import { connect } from "react-redux";
 import { PortfolioView } from "./Portfolio.view";
 import {
 	setInstrumentNumberInPortfolio,
 	incrementInstrumentAmountInPortfolio,
 	decrementInstrumentAmountInPortfolio,
-} from "../../../../../../store/Portfolio";
-import { AppState } from "../../../../../../store";
-import { connect } from "react-redux";
+} from "../../../../../../store/Portfolio/Portfolio.actions";
+
+import { AppState } from "../../../../../../store"
+import { Bond } from "../../../../../../common/types";
 
 type PortfolioState = {
 	bonds: { [instrumentId: string]: Bond };
@@ -19,7 +20,6 @@ type PortfolioDispatch = {
 	incrementInstrumentAmountInPortfolio: typeof incrementInstrumentAmountInPortfolio,
 	decrementInstrumentAmountInPortfolio: typeof decrementInstrumentAmountInPortfolio,
 };
-
 
 export type PortfolioProps = PortfolioState & PortfolioDispatch;
 
@@ -37,4 +37,4 @@ const mapDispatchToProps: PortfolioDispatch = {
 	incrementInstrumentAmountInPortfolio: incrementInstrumentAmountInPortfolio,
 	decrementInstrumentAmountInPortfolio: decrementInstrumentAmountInPortfolio,
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Portfolio);
+export default connect(mapStateToProps, mapDispatchToProps)(Portfolio)

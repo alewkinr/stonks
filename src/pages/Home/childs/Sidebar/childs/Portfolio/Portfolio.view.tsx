@@ -7,9 +7,25 @@ import { Bond } from "./childs/Bond";
 
 import { Scrollbars } from "react-custom-scrollbars";
 
+const filterBondsByInstrumentId = (bonds, _id: string) => {
+    return bonds.filter(
+        (bond, _id) => bond.instrumentId === _id
+    )
+}
+
 // extractBondFromBondList - получаем объект бонда по его instrumentId
 const extractBondFromBondList = (bonds, instrumentId) => {
-    return bonds[instrumentId]
+    let res = filterBondsByInstrumentId(bonds, instrumentId);
+    if (res.length === 0) {
+        return {};
+    };
+
+    if (res.length === 1) {
+        return res[0]
+    }
+
+    throw "duplicated bond in data";
+
 };
 
 export const PortfolioView: React.FC<PortfolioProps> = (props) => {
@@ -18,9 +34,7 @@ export const PortfolioView: React.FC<PortfolioProps> = (props) => {
         portfolio,
         incrementInstrumentAmountInPortfolio,
         decrementInstrumentAmountInPortfolio,
-        setInstrumentNumberInPortfolio,
     } = props;
-
 
     return (
         <div className={styles.container}>
@@ -33,18 +47,19 @@ export const PortfolioView: React.FC<PortfolioProps> = (props) => {
                     {
                         Object.keys(portfolio).map((instrumentId, i) => {
                             let instrumentNumber = portfolio[instrumentId];
-                            let { issuer, issuerImg } = extractBondFromBondList(bonds, instrumentId);
+                            let bond = extractBondFromBondList(bonds, instrumentId);
 
+                            let { issuer, issuerImg } = bond;
                             return (
                                 <Bond
                                     key={i}
-                                    portfolio={portfolio}
                                     issuerTitle={issuer}
                                     logoUrl={issuerImg}
                                     amount={instrumentNumber}
-                                    onIncrement={incrementInstrumentAmountInPortfolio}
-                                    onDecrement={decrementInstrumentAmountInPortfolio}
-                                    onSetAount={setInstrumentNumberInPortfolio}
+                                    onIncrement={() => { incrementInstrumentAmountInPortfolio(instrumentId) }}
+                                    onDecrement={() => { decrementInstrumentAmountInPortfolio(instrumentId) }}
+                                // todo: finish set certain amount
+                                /*  onSetAount={setInstrumentNumberInPortfolio} */
                                 />
                             )
                         })

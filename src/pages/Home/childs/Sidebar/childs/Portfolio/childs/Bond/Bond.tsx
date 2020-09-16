@@ -2,9 +2,11 @@ import React from "react";
 import { BondView } from "./Bond.view";
 
 type BondState = {
-	issuerTitle: string;
-	logoUrl: string;
+	issuerTitle: String;
+	logoUrl: String;
 	amount: number;
+	onIncrement: Function;
+	onDecrement: Function;
 };
 
 export type BondProps = BondState;
