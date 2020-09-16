@@ -7,22 +7,7 @@
 	cursor: pointer;
 }
 
-a:link {
+a {
+	color: #222222!important;
 	text-decoration: underline;
-	color: white;
-}
-
-a:visited {
-	text-decoration: none;
-	color: white;
-}
-
-a:hover {
-	text-decoration: underline;
-	color: white;
-}
-
-a:active {
-	text-decoration: underline;
-	color: white;
 }

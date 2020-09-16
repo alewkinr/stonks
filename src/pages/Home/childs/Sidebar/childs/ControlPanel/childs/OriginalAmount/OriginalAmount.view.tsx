@@ -5,17 +5,19 @@ import { OriginalAmountProps } from "./OriginalAmount";
 import { InfoTooltip } from "../../../../../../../../components/InfoTooltip"
 import ContentEditable from "react-contenteditable";
 import { convertToFormat } from "./handlers/ConvertToFormat";
+import { Slider } from "../../../../../../../../components/Slider";
 
 export const OriginalAmountView: React.FC<OriginalAmountProps> = (props) => {
 	const {originAmount, setOriginalAmount} = props;
 
 	return (
-		<div className={styles.container} style={{ height: "50px" }}>
+		<div className={styles.container}>
 			<div className={styles.title}>{"Капитал"}</div>
-			<InfoTooltip text="Сумма, которую вы готовы вложить в момент открытия счета" />
+			<InfoTooltip absolute text="Сумма, которую вы готовы вложить в момент открытия счета." />
 			<ContentEditable className={styles.value}
 				html={convertToFormat(originAmount)}
 				onChange={e => setOriginalAmount(e.target.value)} />
+			<Slider step={10} />
 		</div>
 	);
 }
