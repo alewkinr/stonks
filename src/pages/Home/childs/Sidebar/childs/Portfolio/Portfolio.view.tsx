@@ -4,29 +4,9 @@ import React, { useEffect } from "react";
 import { PortfolioProps } from "./Portfolio";
 import { InformationOnFunds } from "./childs/InformationOnFunds";
 import { Bond } from "./childs/Bond";
-
 import { Scrollbars } from "react-custom-scrollbars";
 
-const filterBondsByInstrumentId = (bonds, _id: string) => {
-    return bonds.filter(
-        (bond, _id) => bond.instrumentId === _id
-    )
-}
-
-// extractBondFromBondList - получаем объект бонда по его instrumentId
-const extractBondFromBondList = (bonds, instrumentId) => {
-    let res = filterBondsByInstrumentId(bonds, instrumentId);
-    if (res.length === 0) {
-        return {};
-    };
-
-    if (res.length === 1) {
-        return res[0]
-    }
-
-    throw "duplicated bond in data";
-
-};
+import { FindBondByInstrumentId } from "../../../../../../store/Portfolio/utils/Portfolio.utils"
 
 export const PortfolioView: React.FC<PortfolioProps> = (props) => {
     const {
@@ -42,12 +22,12 @@ export const PortfolioView: React.FC<PortfolioProps> = (props) => {
                 <div className={styles.label}>{"Состав портфеля"}</div>
             </div>
             <InformationOnFunds />
-            <Scrollbars autoHide style={{ width: "100%", height: "420px" }}>
+            <Scrollbars autoHide style={{ width: "100%", height: "350px" }}>
                 <div className={styles.bonds}>
                     {
                         Object.keys(portfolio).map((instrumentId, i) => {
                             let instrumentNumber = portfolio[instrumentId];
-                            let bond = extractBondFromBondList(bonds, instrumentId);
+                            let bond = FindBondByInstrumentId(bonds, instrumentId);
 
                             let { issuer, issuerImg } = bond;
                             return (

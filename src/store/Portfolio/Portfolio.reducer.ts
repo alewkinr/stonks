@@ -2,6 +2,7 @@ import { Keys } from "./Portfolio.keys";
 import { Actions } from "./Portfolio.actions.type";
 import { initState, State } from "./Portfolio.state";
 import { Bond } from "../../common/types";
+import { IsBondIncludedInPortfolio } from "./utils/Portfolio.utils"
 
 export const portfolio = (state = initState, action: Actions): State => {
     switch (action.type) {
@@ -11,32 +12,28 @@ export const portfolio = (state = initState, action: Actions): State => {
             let instrumentId = action.instrumentId;
 
 
-            if (!state.bonds.hasOwnProperty(instrumentId)) {
+            if (!IsBondIncludedInPortfolio(state.bonds, instrumentId)) {
                 console.log("something goes wrong, instrumentId not found");
                 return state;
             }
 
-            if (portfolio[instrumentId] == 0) {
-                return state;
-            }
-
-            portfolio[instrumentId] = --portfolio[instrumentId]
+            portfolio[instrumentId] = ++portfolio[instrumentId]
 
             return {
                 ...state,
-                portfolio: portfolio,
+                portfolio: { ...portfolio },
             }
 
         case Keys.DECREMENT_INSTRUMENT_AMOUNT_IN_PORTFOLIO:
             instrumentId = action.instrumentId;
             portfolio = state.portfolio;
 
-            if (!bonds.hasOwnProperty(instrumentId)) {
+            if (!IsBondIncludedInPortfolio(state.bonds, instrumentId)) {
                 console.log("something goes wrong, instrumentId not found");
                 return state;
             }
 
-            if (portfolio[instrumentId] == 0) {
+            if (portfolio[instrumentId] === 0) {
                 return state;
             }
 
@@ -53,12 +50,12 @@ export const portfolio = (state = initState, action: Actions): State => {
             instrumentId = action.instrumentId;
             let numberToSet = action.instrumentNumber;
 
-            if (!bonds.hasOwnProperty(instrumentId)) {
+            if (!IsBondIncludedInPortfolio(state.bonds, instrumentId)) {
                 console.log("something goes wrong, instrumentId not found");
                 return state;
             }
 
-            if (portfolio.hasOwnProperty(instrumentId)) {
+            if (!IsBondIncludedInPortfolio(portfolio, instrumentId)) {
                 console.log("something goes wrong, instrumentId not found in portfolio");
                 return state;
             }
@@ -68,7 +65,7 @@ export const portfolio = (state = initState, action: Actions): State => {
                 return state;
             }
 
-            if (numberToSet == 0) {
+            if (numberToSet === 0) {
                 portfolio[instrumentId] = 0;
             }
 

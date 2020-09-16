@@ -28,7 +28,8 @@ const Portfolio: React.FC<PortfolioProps> = (props) => {
 }
 
 const mapStateToProps = (state: AppState): PortfolioState => {
-	const { bonds, portfolio } = state.portfolio;
+	let { bonds, portfolio } = state.portfolio;
+
 	return { bonds, portfolio }
 }
 
