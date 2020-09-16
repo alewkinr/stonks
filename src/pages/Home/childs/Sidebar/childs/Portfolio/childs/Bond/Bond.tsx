@@ -1,7 +1,14 @@
 import React from "react";
 import { BondView } from "./Bond.view";
 
-type BondState = { /* your states */ };
+type BondState = {
+	issuerTitle: String;
+	logoUrl: String;
+	amount: number;
+	fullPrice: number;
+	onIncrement: Function;
+	onDecrement: Function;
+};
 
 export type BondProps = BondState;
 
