@@ -1,3 +1,3 @@
-import { ForecastPeriod } from "./ForecastPeriod";
+import ForecastPeriod from "./ForecastPeriod";
 
 export { ForecastPeriod };

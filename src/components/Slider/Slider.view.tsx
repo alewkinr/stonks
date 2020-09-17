@@ -1,9 +1,9 @@
 import styles from "./Slider.style.css";
 
 import React from "react";
-import { SliderProps } from "./Slider";
 import { withStyles } from '@material-ui/core/styles';
-import Slider from '@material-ui/core/Slider';
+import Slider, { SliderTypeMap } from '@material-ui/core/Slider';
+import { OverridableComponent } from "@material-ui/core/OverridableComponent";
 
 const CustomSlider = withStyles({
 	root: {
@@ -43,12 +43,10 @@ const CustomSlider = withStyles({
 	},
 })(Slider);
 
-export const SliderView: React.FC<SliderProps> = (props) => {
-	const {step} = props;
-
+export const SliderView: OverridableComponent<SliderTypeMap> = (props) => {
 	return (
 		<div className={styles.container}>
-			<CustomSlider marks step={step} />
+			<CustomSlider {...props} />
 		</div>
 	);
 }

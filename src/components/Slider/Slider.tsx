@@ -1,12 +1,8 @@
+import { SliderProps, SliderTypeMap } from "@material-ui/core";
+import { OverridableComponent } from "@material-ui/core/OverridableComponent";
 import React from "react";
 import { SliderView } from "./Slider.view";
 
-type SliderState = {
-	step?: number;
-};
-
-export type SliderProps = SliderState;
-
-export const Slider: React.FC<SliderProps> = (props) => {
+export const Slider: OverridableComponent<SliderTypeMap> = (props) => {
 	return <SliderView {...props} />
 }

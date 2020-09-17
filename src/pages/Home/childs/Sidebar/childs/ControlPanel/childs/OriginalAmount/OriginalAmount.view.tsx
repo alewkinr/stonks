@@ -8,6 +8,10 @@ import { convertToFormat } from "./handlers/ConvertToFormat";
 import { Slider } from "../../../../../../../../components/Slider";
 
 export const OriginalAmountView: React.FC<OriginalAmountProps> = (props) => {
+	const SLIDER_MAX = 4000000;
+	const SLIDER_MIN = 100000;
+	const SLIDER_STEP = 300000;
+
 	const {originAmount, setOriginalAmount} = props;
 
 	return (
@@ -17,7 +21,12 @@ export const OriginalAmountView: React.FC<OriginalAmountProps> = (props) => {
 			<ContentEditable className={styles.value}
 				html={convertToFormat(originAmount)}
 				onChange={e => setOriginalAmount(e.target.value)} />
-			<Slider step={10} />
+			<Slider marks
+				value={Number.parseInt(originAmount)}
+				step={SLIDER_STEP}
+				min={SLIDER_MIN}
+				max={SLIDER_MAX}
+				onChange={(_, value: number) => setOriginalAmount(value.toString())} />
 		</div>
 	);
 }

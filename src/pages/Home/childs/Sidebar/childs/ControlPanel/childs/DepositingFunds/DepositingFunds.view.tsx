@@ -8,9 +8,12 @@ import { convertToFormat } from "./handlers/ConvertToFormat";
 import { Slider } from "../../../../../../../../components/Slider";
 
 export const DepositingFundsView: React.FC<DepositingFundsProps> = (props) => {
-    const { depositFunds, setDepositingFunds } = props;
+    const SLIDER_MAX = 100000;
+	const SLIDER_MIN = 0;
+    const SLIDER_STEP = 10000;
+    
+    const {depositFunds, setDepositingFunds} = props;
 
-    console.log(typeof setDepositingFunds);
     return (
         <div className={styles.container}>
             <div className={styles.title}>{"Пополнения"}</div>
@@ -19,7 +22,13 @@ export const DepositingFundsView: React.FC<DepositingFundsProps> = (props) => {
                 className={styles.value}
                 html={convertToFormat(depositFunds)}
                 onChange={(e) => setDepositingFunds(e.target.value)} />
-            <Slider step={10} />
+            <Slider marks
+				defaultValue={Number.parseInt(depositFunds)}
+				value={Number.parseInt(depositFunds.replace(/ /gm, ""))}
+				step={SLIDER_STEP}
+				min={SLIDER_MIN}
+				max={SLIDER_MAX}
+				onChange={(_, value: number) => setDepositingFunds(value.toString())} />
         </div>
     );
 };
