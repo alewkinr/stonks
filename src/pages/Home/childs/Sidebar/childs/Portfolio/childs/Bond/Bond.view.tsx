@@ -1,11 +1,14 @@
 import styles from "./Bond.style.css";
 import React from "react";
 import { BondProps } from "./Bond";
+import ContentEditable from "react-contenteditable";
+
+import { convertToFormat, customParseInt } from "./helpers/ConvertToFormat"
 
 export const BondView: React.FC<BondProps> = (props) => {
-	const { issuerTitle, logoUrl, amount, fullPrice } = props;
+	const { instrumentId, issuerTitle, logoUrl, amount, fullPrice } = props;
 
-	const { onIncrement, onDecrement } = props;
+	const { onIncrement, onDecrement, onSetAmount } = props;
 
 	return (
 		<div className={styles.container}>
@@ -18,13 +21,17 @@ export const BondView: React.FC<BondProps> = (props) => {
 					<div className={styles.count}>
 						<div
 							className={`${styles.control} ${styles.minus}`}
-							onClick={() => { onDecrement() }} />
+							onClick={() => { onDecrement(instrumentId) }} />
 
-						<span>{`${amount} шт.`}</span>
+						<ContentEditable
+							className={styles.value}
+							html={convertToFormat(amount)}
+							onChange={(e) => { onSetAmount(instrumentId, customParseInt(e.target.value)) }}
+						/>
 
 						<div
 							className={`${styles.control} ${styles.plus}`}
-							onClick={() => { onIncrement() }}
+							onClick={() => { onIncrement(instrumentId) }}
 						/>
 					</div>
 					<div className={styles.fullPrice}>{fullPrice}</div>
