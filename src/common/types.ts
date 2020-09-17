@@ -90,6 +90,10 @@ export class Bond {
         return this._couponCalendar;
     }
 
+    get price(): number {
+        return this._price;
+    }
+
     static deserialize(input: any): Bond {
         return new Bond(
             input.instrumentId,
