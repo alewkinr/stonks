@@ -41,5 +41,16 @@ export const IsBondIncludedInPortfolio = (bonds: { [instrumentId: string]: any }
 
 // CalculateBondsCost - вычисляем номинальную стоимость пачки бондов 
 export const CalculateBondsCost = (bond: Bond, amount: number): number => {
+  const MAX_AMOUNT_LIMIT = 100;
+  let res = 0;
+
+  if (amount <= 0) {
+    return Number(bond.notional) * 1
+  }
+
+  if (amount > MAX_AMOUNT_LIMIT) {
+    return Number(bond.notional) * MAX_AMOUNT_LIMIT
+  }
+
   return Number(bond.notional) * amount
 }

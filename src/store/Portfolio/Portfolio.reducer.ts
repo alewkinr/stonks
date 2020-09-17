@@ -56,35 +56,34 @@ export const portfolio = (state = initState, action: Actions): State => {
         case Keys.SET_INSTRUMENT_NUMBER_IN_PORTFOLIO:
             bonds = state.bonds;
             portfolio = state.portfolio;
+            cost = state.cost;
             instrumentId = action.instrumentId;
             let numberToSet = action.instrumentNumber;
+
+            bond = FindBondByInstrumentId(bonds, instrumentId);
 
             if (!IsBondIncludedInPortfolio(state.bonds, instrumentId)) {
                 console.log("something goes wrong, instrumentId not found");
                 return state;
             };
 
-            if (!IsBondIncludedInPortfolio(portfolio, instrumentId)) {
-                console.log("something goes wrong, instrumentId not found in portfolio");
-                return state;
-            };
-
-            if (numberToSet < 0) {
-                console.log("something goes wrong, numberToSet < 0, don't handle this request");
-                return state;
-            };
-
-            if (numberToSet === 0) {
+            if (numberToSet <= 0) {
                 portfolio[instrumentId] = 0;
-            };
+                cost.set(instrumentId, CalculateBondsCost(bond, 1));
 
-            if (numberToSet > 0) {
-                portfolio[instrumentId] = numberToSet;
-            };
+                return {
+                    ...state,
+                    portfolio: { ...portfolio },
+                    cost: cost,
+                };
+            }
 
+            portfolio[instrumentId] = numberToSet;
+            cost.set(instrumentId, CalculateBondsCost(bond, portfolio[instrumentId]));
             return {
                 ...state,
-                portfolio: portfolio,
+                portfolio: { ...portfolio },
+                cost: cost,
             };
 
         default:

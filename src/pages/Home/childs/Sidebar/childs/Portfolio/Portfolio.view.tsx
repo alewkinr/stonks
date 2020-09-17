@@ -15,6 +15,7 @@ export const PortfolioView: React.FC<PortfolioProps> = (props) => {
         cost,
         incrementInstrumentAmountInPortfolio,
         decrementInstrumentAmountInPortfolio,
+        setInstrumentNumberInPortfolio,
     } = props;
 
     return (
@@ -35,14 +36,14 @@ export const PortfolioView: React.FC<PortfolioProps> = (props) => {
                             return (
                                 <Bond
                                     key={i}
+                                    instrumentId={instrumentId}
                                     issuerTitle={issuer}
                                     logoUrl={issuerImg}
                                     amount={instrumentCount}
                                     fullPrice={cost.get(instrumentId)}
-                                    onIncrement={() => { incrementInstrumentAmountInPortfolio(instrumentId) }}
-                                    onDecrement={() => { decrementInstrumentAmountInPortfolio(instrumentId) }}
-                                // todo: finish set certain amount
-                                /*  onSetAount={setInstrumentNumberInPortfolio} */
+                                    onIncrement={incrementInstrumentAmountInPortfolio}
+                                    onDecrement={decrementInstrumentAmountInPortfolio}
+                                    onSetAmount={setInstrumentNumberInPortfolio}
                                 />
                             )
                         })

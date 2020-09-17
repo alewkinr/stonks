@@ -45,9 +45,23 @@
 	align-items: center;
 	color: #c4c4c4;
 }
+.value {
+	display: flex;
+	padding: 0 10px 0 10px;
+	color: #222;
+	font-size: 12px;
+	border-radius: 0px;
+	border-color: transparent;
+	align-items: center;
+	outline: none;
+}
 
-.count > * + * {
+.value:after {
+	content: "шт.";
+	display: block;
 	margin-left: 5px;
+	margin-right: 0;
+	padding-right: 0;
 }
 
 .control {
