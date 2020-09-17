@@ -90,6 +90,10 @@ export class Bond {
         return this._couponCalendar;
     }
 
+    get couponCost(): number {
+        return this._couponCost;
+    }
+
     get price(): number {
         return this._price;
     }
@@ -116,11 +120,11 @@ export class Bond {
     }
 }
 
-export class CouponCalendar {
+export class CouponCalendarLine {
     constructor(
         private readonly _date: Date,
         private readonly _issuer: string,
-        private readonly _payment: number
+        private _payment: number
     ) {
         this._date = _date;
         this._issuer = _issuer;
@@ -137,5 +141,9 @@ export class CouponCalendar {
 
     get payment(): number {
         return this._payment;
+    }
+
+    set payment(payment) {
+        this._payment = payment;
     }
 }
