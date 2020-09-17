@@ -313,3 +313,5 @@ sketch
 .idea
 ./.idea
 nohup.out
+
+/src/common/test*

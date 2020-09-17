@@ -22,15 +22,23 @@ function getFundDates(start: Date, end: Date): Array<Date> {
     let endMonth = end.getMonth();
 
     let dates: Array<Date> = [];
-    while (year > endYear || (month > endMonth && year === endYear)) {
+    while (year < endYear || (month < endMonth && year === endYear)) {
         let tempDate = new Date(year, month, 1);
-        if (tempDate < start) continue;
+        if (tempDate < start) {
+            month++;
+            if (month > 11) {
+                month = 0;
+                year++;
+            } 
+            continue;  
+        };
         dates.push(tempDate);
         month++;
-        if (month > 12) {
-            month = 1;
+        if (month > 11) {
+            month = 0;
             year++;
         }
+
     }
 
     return dates;
@@ -42,10 +50,23 @@ function setreinvest(quantitiesPrices, minPrice, freeMoney): number {
         let quantitiesPricesLine = quantitiesPrices[k];
         let num = Math.floor(freeMoney / quantitiesPricesLine.price);
         quantitiesPricesLine.quantity += num;
-        freeMoney -= quantitiesPricesLine.price * num;
+        freeMoney -= Math.floor(quantitiesPricesLine.price * num);
     }
     return freeMoney;
 }
+
+function dateCoupons(coupons: BondPayment[], start: Date, end: Date):  BondPayment[] {
+    
+    let result: BondPayment[] = [];
+    for (let i=0; i< coupons.length; i++) {
+        let coupon = coupons[i];
+        let date = new Date(coupon.date.toString());
+        if (date < start || date > end) continue;
+        result.push(new BondPayment(new Date(coupon.date.toString()), coupon.payment));
+    }
+    return result;
+}
+
 
 export function solvingForecastSumsCalendarAndChartData(
     originalSum: number,
@@ -62,7 +83,8 @@ export function solvingForecastSumsCalendarAndChartData(
     barChartData: (string | Date | number)[][];
     pieChartData: (string | number)[][];
 } {
-    const dateNow = new Date();
+    const date = new Date();
+    const dateNow = new Date(date.getFullYear(), date.getMonth(), date.getDay());
     const endDate = new Date(
         dateNow.getFullYear() + period,
         dateNow.getMonth(),
@@ -88,9 +110,9 @@ export function solvingForecastSumsCalendarAndChartData(
     for (var i = 0; i < bonds.length; i++) {
         let { bond, quantity } = bonds[i];
         portfolioSum += bond.price * quantity;
-        pieChartData.push([bond.issuer, bond.price * quantity]);
+        //pieChartData.push([bond.issuer, bond.price * quantity]);
 
-        calendarArrays.push(bond.couponCalendar);
+        calendarArrays.push(dateCoupons(bond.couponCalendar, dateNow, endDate));
         issuerNames.push(bond.issuer);
         quantitiesPrices.push({
             quantity: quantity,
@@ -106,6 +128,7 @@ export function solvingForecastSumsCalendarAndChartData(
         return b.couponCost - a.couponCost;
     });
 
+
     const couponCalendar: CouponCalendarLine[] = [];
     const elementIdxs = calendarArrays.map(() => 0);
 
@@ -118,13 +141,7 @@ export function solvingForecastSumsCalendarAndChartData(
         for (let arrayIdx = 0; arrayIdx < calendarArrays.length; arrayIdx++) {
             const relevantArray = calendarArrays[arrayIdx];
             const elementIdx = elementIdxs[arrayIdx];
-            if (
-                relevantArray[elementIdx].date < dateNow ||
-                relevantArray[elementIdx].date > endDate
-            )
-                continue;
-
-            if (elementIdx === relevantArray.length) continue;
+            if (elementIdx === relevantArray.length) continue;            
             smallestItems.push({
                 arrayIdx,
                 calendarLine: relevantArray[elementIdx],
@@ -138,9 +155,10 @@ export function solvingForecastSumsCalendarAndChartData(
         if (iis && prevYear < nextItem.calendarLine.date.getFullYear()) {
             prevYear++;
             couponCalendar.push(
-                new CouponCalendarLine(new Date(prevYear, 1, 1), "ИИС", 0)
+                new CouponCalendarLine(new Date(prevYear, 0, 1), "ИИС", 0)
             );
             couponIndexes.push(nextItem.arrayIdx);
+            console.log(new Date(prevYear, 0, 1));
         }
 
         couponCalendar.push(
@@ -153,6 +171,8 @@ export function solvingForecastSumsCalendarAndChartData(
         couponIndexes.push(nextItem.arrayIdx);
         elementIdxs[nextItem.arrayIdx]++;
     }
+
+    //console.log(couponCalendar);
 
     let barChartData: (string | Date | number)[][] = [];
     barChartData.push(["Дата", "Облигации", "Свободные средства"]);
@@ -173,7 +193,13 @@ export function solvingForecastSumsCalendarAndChartData(
         let calendarLine = couponCalendar[i];
         let quantitypriceLine = quantitiesPrices[couponIndexes[i]];
 
+        if (calendarLine.issuer === "ИИС") {
+            calendarLine.payment = Math.round(yearSum * 0.13);
+            yearSum = 0;
+        }
+
         for (let j = fundsIndex; j < fundsDates.length; j++) {
+            fundsIndex = j;
             if (fundsDates[j] > calendarLine.date) break;
             sum += funds;
             yearSum += funds;
@@ -184,12 +210,9 @@ export function solvingForecastSumsCalendarAndChartData(
             }
         }
 
-        if (calendarLine.issuer === "ИИС") {
-            calendarLine.payment = Math.round(yearSum * 0.13);
-            yearSum = 0;
-        }
 
-        let payment = quantitypriceLine.couponCost * quantitypriceLine.quantity;
+
+        let payment = Math.floor(quantitypriceLine.couponCost * quantitypriceLine.quantity);
         sum += payment;
         profit += payment;
         yearSum += payment;
@@ -200,6 +223,11 @@ export function solvingForecastSumsCalendarAndChartData(
         }
 
         barChartData.push([calendarLine.date, portfolioSum, freeMoney]);
+    }
+
+    for (let i=0; i< quantitiesPrices.length; i++){
+        let element = quantitiesPrices[i];
+        pieChartData.push([issuerNames[i], element.price * element.quantity]);   
     }
 
     return {
