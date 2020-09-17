@@ -31,6 +31,7 @@ export class Bond {
         private readonly _couponAnnualPercent: number,
         private readonly _couponCost: number,
         private readonly _couponPeriod: number,
+        private readonly _price: number,
         private readonly _couponCalendar: Array<BondPayment>
     ) {
         this._instrumentId = _instrumentId;
@@ -41,6 +42,7 @@ export class Bond {
         this._issuerImg = _issuerImg;
         this._maturityDate = _maturityDate;
         this._notional = _notional;
+        this._price = _price;
         this._currency = _currency;
         this._couponAnnualPercent = _couponAnnualPercent;
         this._couponCost = _couponCost;
@@ -102,6 +104,7 @@ export class Bond {
             input.couponAnnualPercent,
             input.couponCost,
             input.couponPeriod,
+            input.price,
             input.couponCalendar.map(
                 (x) => new BondPayment(new Date(Date.parse(x.date)), x.payment)
             )
