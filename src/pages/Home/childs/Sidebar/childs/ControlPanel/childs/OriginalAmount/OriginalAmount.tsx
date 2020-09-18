@@ -25,13 +25,6 @@ const mapStateToProps = (state: AppState): OriginalAmountState => {
     const { bonds, portfolio } = state.portfolio;
 
     const bondSum = getBondsSum(bonds, portfolio);
-
-    if (bondSum > Number(originAmount)) {
-        let norm_sum = 100000;
-        while (norm_sum < bondSum) norm_sum += 300000;
-        originAmount = norm_sum.toString();
-    }
-
     console.log(bondSum, originAmount);
 
     return { originAmount, bondSum };

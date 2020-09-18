@@ -19,6 +19,12 @@ export const OriginalAmountView: React.FC<OriginalAmountProps> = (props) => {
 
     const { originAmount, bondSum, setOriginalAmount } = props;
 
+    if (bondSum > Number(originAmount)) {
+        let norm_sum = 100000;
+        while (norm_sum < bondSum) norm_sum += 300000;
+        setOriginalAmount(norm_sum.toString());
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.title}>{"Капитал"}</div>
