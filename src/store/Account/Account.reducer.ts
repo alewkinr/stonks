@@ -12,6 +12,8 @@ export const account = (state = initState, action: Actions): State => {
             return { ...state, depositingFunds: action.depositingFunds };
         case Keys.SET_FORECAST_PERIOD:
             return { ...state, forecastPeriod: action.forecastPeriod };
+        case Keys.SET_REINVESTMENT:
+            return { ...state, reinvestment: action.reinvestment };
         default:
             return state;
     }

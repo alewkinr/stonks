@@ -35,8 +35,8 @@ const mapStateToProps = (state: AppState): CouponCalendarState => {
         originalAmount,
         depositingFunds,
         forecastPeriod,
+        reinvestment,
     } = state.account;
-    const reinvestment = false;
     const {
         sum,
         porfit,

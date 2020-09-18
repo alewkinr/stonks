@@ -70,6 +70,10 @@ function setreinvest(quantitiesPrices, minPrice, freeMoney): number {
         let quantitiesPricesLine = quantitiesPrices[k];
         let num = Math.floor(freeMoney / quantitiesPricesLine.price);
         quantitiesPricesLine.quantity += num;
+        /*quantitiesPricesLine.quantity = Math.min(
+            100,
+            quantitiesPricesLine.quantity
+        );*/
         freeMoney -= Math.floor(quantitiesPricesLine.price * num);
     }
     return freeMoney;
@@ -214,7 +218,6 @@ export function solvingForecastSumsCalendarAndChartData(
                 couponPaymentAmount: 0,
             });
             couponIndexes.push(nextItem.arrayIdx);
-            console.log(new Date(prevYear, 0, 1));
         }
 
         let bond = bonds[nextItem.arrayIdx];
@@ -229,11 +232,7 @@ export function solvingForecastSumsCalendarAndChartData(
         });
         couponIndexes.push(nextItem.arrayIdx);
         elementIdxs[nextItem.arrayIdx]++;
-
-        console.log(nextItem.calendarLine.date);
     }
-
-    console.log(couponCalendar);
 
     let barChartData: (string | Date | number)[][] = [];
     barChartData.push(["Дата", "Облигации", "Свободные средства"]);
@@ -253,11 +252,13 @@ export function solvingForecastSumsCalendarAndChartData(
     for (var i: number = 0; i < couponCalendar.length; i++) {
         let calendarLine = couponCalendar[i];
         let quantitypriceLine = quantitiesPrices[couponIndexes[i]];
+        let isiis: boolean = false;
 
         if (calendarLine.issuerName === "ИИС") {
             calendarLine.couponPaymentAmount = Math.round(yearSum * 0.13);
             calendarLine.issuerName = "Начисление налогового вычета на ИИС";
             yearSum = 0;
+            isiis = true;
         }
 
         for (let j = fundsIndex; j < fundsDates.length; j++) {
@@ -272,6 +273,8 @@ export function solvingForecastSumsCalendarAndChartData(
             }
         }
 
+        console.log(quantitiesPrices, quantitypriceLine);
+
         let payment = Math.floor(
             quantitypriceLine.couponCost * quantitypriceLine.quantity
         );
@@ -279,6 +282,7 @@ export function solvingForecastSumsCalendarAndChartData(
         profit += payment;
         yearSum += payment;
         freeMoney += payment;
+        if (!isiis) calendarLine.couponPaymentAmount = payment;
 
         if (reinvestment) {
             freeMoney = setreinvest(quantitiesPrices, minPrice, freeMoney);
@@ -286,10 +290,13 @@ export function solvingForecastSumsCalendarAndChartData(
 
         barChartData.push([
             new Date(calendarLine.paymentDate).toLocaleString().substr(0, 10),
-            portfolioSum,
+            sum - freeMoney,
             freeMoney,
         ]);
+        console.log(quantitiesPrices, quantitypriceLine);
     }
+
+    console.log(quantitiesPrices);
 
     for (let i = 0; i < quantitiesPrices.length; i++) {
         let element = quantitiesPrices[i];

@@ -29,9 +29,9 @@ const mapStateToProps = (state: AppState): ChartsState => {
         originalAmount,
         depositingFunds,
         forecastPeriod,
+        reinvestment,
     } = state.account;
 
-    const reinvestment = false;
     const {
         sum,
         porfit,
