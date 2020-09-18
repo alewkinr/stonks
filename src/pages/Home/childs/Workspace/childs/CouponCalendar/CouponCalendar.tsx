@@ -39,7 +39,7 @@ const mapStateToProps = (state: AppState): CouponCalendarState => {
     } = state.account;
     const {
         sum,
-        porfit,
+        profit: porfit,
         percent,
         calendar,
         barChartData,

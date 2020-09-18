@@ -1,4 +1,4 @@
-import { CouponCalendarLine, Bond, BondPayment } from "./types";
+import { Bond, BondPayment } from "./types";
 import { CouponCalendarPayment } from "../pages/Home/childs/Workspace/childs/CouponCalendar/CouponCalendar";
 import {
     FindBondByInstrumentId,
@@ -128,7 +128,7 @@ export function solvingForecastSumsCalendarAndChartData(
     reinvestment: boolean
 ): {
     sum: number;
-    porfit: number;
+    profit: number;
     percent: number;
     calendar: Array<CouponCalendarPayment>;
     barChartData: (string | Date | number)[][];
@@ -309,7 +309,7 @@ export function solvingForecastSumsCalendarAndChartData(
 
     return {
         sum: sum,
-        porfit: profit,
+        profit: profit,
         percent: Math.round((profit * 100) / sum),
         calendar: couponCalendar,
         barChartData: barChartData,
