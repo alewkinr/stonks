@@ -20,6 +20,7 @@ const OriginalAmount: React.FC<OriginalAmountProps> = (props) => {
 
 const mapStateToProps = (state: AppState): OriginalAmountState => {
     const { originalAmount: originAmount } = state.account;
+    const { bonds, portfolio } = state.portfolio;
 
     return { originAmount };
 };
@@ -27,5 +28,7 @@ const mapStateToProps = (state: AppState): OriginalAmountState => {
 const mapDispatchToProps: OriginalAmountDispatch = {
     setOriginalAmount,
 };
+
+export const checkSums = (sum: number) => {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(OriginalAmount);
