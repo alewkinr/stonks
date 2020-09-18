@@ -5,6 +5,7 @@ type RowState = {
     date: string;
     bondName: string;
     sum: string;
+    issuerLogoUrl: string;
 };
 
 export type RowProps = RowState;

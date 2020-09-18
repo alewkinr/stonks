@@ -11,7 +11,8 @@ export const HeaderView: React.FC<HeaderProps> = (props) => {
 		<div className={styles.container}>
 			<div className={styles.title}>
 				<span>Мой счет</span>
-				<InfoTooltip interactive text="ИИС — брокерский счёт с налоговыми льготами и ряд 
+				<InfoTooltip interactive text="БС — обычный брокерский счет <br/>
+				ИИС — брокерский счёт с налоговыми льготами и рядом
 				<a href='https://broker.ru/whats-iis' target='_blank'>ограничений</a>" />
 			</div>
 			<AccountType />
