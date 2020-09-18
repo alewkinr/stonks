@@ -8,46 +8,45 @@
  * @param {string} value Пользовательское значение.
  * @returns {string} Отформатированное значение.
  */
-function convertToFormat(value: number): string {
+function convertToFormat(value: number, limit: number = 100): string {
+    const normilizedValue = normilize(value.toString(), limit);
+    const formatter = new Intl.NumberFormat("ru");
 
-  const normilizedValue = normilize(value.toString());
-  const formatter = new Intl.NumberFormat("ru");
+    const format = formatter.format(normilizedValue);
 
-  const format = formatter.format(normilizedValue);
-
-  return format === "не число" ? "" : format;
+    return format === "не число" ? "" : format;
 }
 
 /**
-* Нормализует значение и приводит к числу.
-*
-* @param value Строковое значение.
-* @returns Числовое значение.
-*/
-function normilize(value: string): number {
-  const MAX_LIMIT = 100;
+ * Нормализует значение и приводит к числу.
+ *
+ * @param value Строковое значение.
+ * @returns Числовое значение.
+ */
+function normilize(value: string, limit: number = 100): number {
+    const MAX_LIMIT = limit;
 
-  if (!value) {
-    return 0;
-  }
+    if (!value) {
+        return 0;
+    }
 
-  const clearValue = value.replace(/[^\d+]/gm, "");
-  let number = Number.parseInt(clearValue);
+    const clearValue = value.replace(/[^\d+,\.]/gm, "");
+    let number = Number.parseInt(clearValue);
 
-  if (number > MAX_LIMIT) {
-    number = MAX_LIMIT;
-  }
+    if (MAX_LIMIT > 0 && number > MAX_LIMIT) {
+        number = MAX_LIMIT;
+    }
 
-  return number;
+    return number;
 }
 
 // customParseInt - враппер для parseInt
 function customParseInt(value: string): number {
-  let res = Number.parseInt(value, 10);
-  if (isNaN(res)) {
-    return 0;
-  }
-  return res;
-};
+    let res = Number.parseInt(value, 10);
+    if (isNaN(res)) {
+        return 0;
+    }
+    return res;
+}
 
 export { convertToFormat, customParseInt };

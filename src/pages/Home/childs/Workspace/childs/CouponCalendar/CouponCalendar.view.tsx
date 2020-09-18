@@ -2,28 +2,29 @@ import styles from "./CouponCalendar.style.css";
 import React from "react";
 import { CouponCalendarProps } from "./CouponCalendar";
 import { Row } from "./childs/Row";
-import { convertToFormat } from "../../../../../../common/utils/ConvertToFormat"
-import { JoinCouponPayments } from "./utils/CouponCalendar.utils"
+import { convertToFormat } from "../../../../../../common/utils/ConvertToFormat";
+import { JoinCouponPayments } from "./utils/CouponCalendar.utils";
 
 const _renderTableRow = (key, date, bondName, issuerLogoUrl, sum) => {
-    return (<Row
-        key={key}
-        date={date}
-        bondName={bondName}
-        sum={convertToFormat(sum)}
-        issuerLogoUrl={issuerLogoUrl}
-    />
-    )
-}
+    return (
+        <Row
+            key={key}
+            date={date}
+            bondName={bondName}
+            sum={convertToFormat(sum, -1)}
+            issuerLogoUrl={issuerLogoUrl}
+        />
+    );
+};
 
 export const CouponCalendarView: React.FC<CouponCalendarProps> = (props) => {
     const { calendarData } = props;
 
     return (
-        <React.Fragment >
+        <React.Fragment>
             <div className={styles.container}>
                 <div className={styles.title}>{"Календарь выплат"}</div>
-                <table >
+                <table>
                     <thead>
                         <tr>
                             <td className={styles.label}>{"Облигация"}</td>
@@ -32,11 +33,15 @@ export const CouponCalendarView: React.FC<CouponCalendarProps> = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {
-                            JoinCouponPayments(calendarData).map((payment, i) => {
-                                return _renderTableRow(i, payment.paymentDate, payment.issuerName, payment.issuerLogoUrl, payment.couponPaymentAmount)
-                            })
-                        }
+                        {JoinCouponPayments(calendarData).map((payment, i) => {
+                            return _renderTableRow(
+                                i,
+                                payment.paymentDate,
+                                payment.issuerName,
+                                payment.issuerLogoUrl,
+                                payment.couponPaymentAmount
+                            );
+                        })}
                     </tbody>
                 </table>
             </div>
