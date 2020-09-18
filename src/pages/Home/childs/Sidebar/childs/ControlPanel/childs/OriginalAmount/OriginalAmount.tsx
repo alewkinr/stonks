@@ -3,9 +3,11 @@ import { connect } from "react-redux";
 import { AppState } from "../../../../../../../../store";
 import { setOriginalAmount } from "../../../../../../../../store/Account/Account.actions";
 import { OriginalAmountView } from "./OriginalAmount.view";
+import { getBondsSum } from "../../../../../../../../common/compute";
 
 type OriginalAmountState = {
     originAmount: string;
+    bondSum: number;
 };
 
 type OriginalAmountDispatch = {
@@ -22,7 +24,9 @@ const mapStateToProps = (state: AppState): OriginalAmountState => {
     const { originalAmount: originAmount } = state.account;
     const { bonds, portfolio } = state.portfolio;
 
-    return { originAmount };
+    const bondSum = getBondsSum(bonds, portfolio);
+    console.log(bondSum);
+    return { originAmount, bondSum };
 };
 
 const mapDispatchToProps: OriginalAmountDispatch = {

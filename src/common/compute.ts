@@ -118,6 +118,24 @@ function getBonds(
     return result;
 }
 
+export function getBondsSum(
+    bondsStore: { [instrumentId: string]: Bond },
+    portfolio: { [instrumentId: number]: number }
+): number {
+    var sum = 0;
+    let result: Array<{ bond: Bond; quantity: number }> = [];
+    Object.keys(bondsStore).forEach((i) => {
+        let quantity = FindBondAmountByInstrumentId(
+            portfolio,
+            bondsStore[i].instrumentId
+        );
+        if (quantity > 0) {
+            sum += quantity * bondsStore[i].price;
+        }
+    });
+    return sum;
+}
+
 export function solvingForecastSumsCalendarAndChartData(
     bondsStore: { [instrumentId: string]: Bond },
     portfolio: { [instrumentId: number]: number },
@@ -274,8 +292,6 @@ export function solvingForecastSumsCalendarAndChartData(
             }
         }
 
-        console.log(quantitiesPrices, quantitypriceLine);
-
         let payment = Math.floor(
             quantitypriceLine.couponCost * quantitypriceLine.quantity
         );
@@ -294,10 +310,7 @@ export function solvingForecastSumsCalendarAndChartData(
             sum - freeMoney,
             freeMoney,
         ]);
-        console.log(quantitiesPrices, quantitypriceLine);
     }
-
-    console.log(quantitiesPrices);
 
     for (let i = 0; i < quantitiesPrices.length; i++) {
         let element = quantitiesPrices[i];
