@@ -23,6 +23,7 @@ export const BarChartView: React.FC<BarChartProps> = (props) => {
                         gridlines: {
                             interval: 5,
                         },
+                        showTextEvery: 5,
                     },
 
                     isStacked: true,
