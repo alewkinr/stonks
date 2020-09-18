@@ -5,10 +5,8 @@ import { AppState } from "../../../../../../store";
 import { CouponCalendarView } from "./CouponCalendar.view";
 import { Bond } from "../../../../../../common/types";
 
-import {
-    CombineCouponCalendar,
-    CombineCouponCalendarWithSolveFunc,
-} from "./utils/CouponCalendar.utils";
+import { solvingForecastSumsCalendarAndChartData } from "../../../../../../common/compute";
+import { AccountType } from "../../../../../../enums/AccountType";
 
 export type CouponCalendarPayment = {
     instrumentId: string;
@@ -38,16 +36,25 @@ const mapStateToProps = (state: AppState): CouponCalendarState => {
         depositingFunds,
         forecastPeriod,
     } = state.account;
-    const calendarData = CombineCouponCalendarWithSolveFunc(
+    const reinvestment = false;
+    const {
+        sum,
+        porfit,
+        percent,
+        calendar,
+        barChartData,
+        pieChartData,
+    } = solvingForecastSumsCalendarAndChartData(
         bonds,
         portfolio,
-        accountType,
         Number(originalAmount),
         Number(depositingFunds),
-        forecastPeriod,
-        false
+        Number(forecastPeriod),
+        accountType === AccountType.INDIVIDUAL_INVESTMENT,
+        reinvestment
     );
 
+    const calendarData = calendar;
     return { bonds, portfolio, calendarData };
 };
 

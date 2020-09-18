@@ -290,7 +290,10 @@ export function solvingForecastSumsCalendarAndChartData(
 
     for (let i = 0; i < quantitiesPrices.length; i++) {
         let element = quantitiesPrices[i];
-        pieChartData.push([issuerNames[i], element.price * element.quantity]);
+        pieChartData.push([
+            issuerNames[element.index],
+            element.price * element.quantity,
+        ]);
     }
 
     return {

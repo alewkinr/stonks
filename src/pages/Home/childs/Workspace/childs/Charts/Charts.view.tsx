@@ -10,11 +10,15 @@ export const ChartsView: React.FC<ChartsProps> = (props) => {
 
     function changeChart(barChart: boolean) {}
 
+    const { barChartData, pieChartData } = props;
+
     return (
         <div className={styles.container}>
             <div className={styles.navbar}>
                 <div
-                    className={`${styles.item} ${onProfit ? styles.active : ""}`}
+                    className={`${styles.item} ${
+                        onProfit ? styles.active : ""
+                    }`}
                     onClick={() => {
                         setonProfit(true);
                         changeChart(true);
@@ -23,7 +27,9 @@ export const ChartsView: React.FC<ChartsProps> = (props) => {
                     {"Доходность"}
                 </div>
                 <div
-                    className={`${styles.item} ${onProfit ? "" : styles.active}`}
+                    className={`${styles.item} ${
+                        onProfit ? "" : styles.active
+                    }`}
                     onClick={() => {
                         setonProfit(false);
                         changeChart(false);
@@ -33,7 +39,11 @@ export const ChartsView: React.FC<ChartsProps> = (props) => {
                 </div>
             </div>
             <div className={styles.charts}>
-                {onProfit ? <BarChart /> : <PieChart />}
+                {onProfit ? (
+                    <BarChart data={barChartData} />
+                ) : (
+                    <PieChart data={pieChartData} />
+                )}
             </div>
         </div>
     );

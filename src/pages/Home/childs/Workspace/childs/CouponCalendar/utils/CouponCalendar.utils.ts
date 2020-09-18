@@ -32,37 +32,6 @@ const _fillCalendarMap = (
     return result;
 };
 
-const CombineCouponCalendarWithSolveFunc = (
-    bonds: { [instrumentId: string]: Bond },
-    portfolio: { [instrumentId: number]: number },
-    iis: AccountType,
-    orgignalAmount: number,
-    funds: number,
-    period: number,
-    reinvestment: boolean
-): Array<CouponCalendarPayment> => {
-    let bondsSolve: Array<{ bond: Bond; quantity: number }> = [];
-
-    const {
-        sum,
-        porfit,
-        percent,
-        calendar,
-        barChartData,
-        pieChartData,
-    } = solvingForecastSumsCalendarAndChartData(
-        bonds,
-        portfolio,
-        orgignalAmount,
-        funds,
-        period,
-        iis === AccountType.INDIVIDUAL_INVESTMENT,
-        reinvestment
-    );
-
-    return calendar;
-};
-
 // CombineCouponCalendar собирает данные для календаря купонов
 const CombineCouponCalendar = (
     bonds: { [instrumentId: string]: Bond },
@@ -164,8 +133,4 @@ const JoinCouponPayments = (
     return result;
 };
 
-export {
-    CombineCouponCalendar,
-    JoinCouponPayments,
-    CombineCouponCalendarWithSolveFunc,
-};
+export { CombineCouponCalendar, JoinCouponPayments };
