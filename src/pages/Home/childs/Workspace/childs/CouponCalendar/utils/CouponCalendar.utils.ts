@@ -8,6 +8,10 @@ import {
 } from "../../../../../../../store/Portfolio/utils/Portfolio.utils";
 import { Console } from "console";
 
+import { AccountType } from "../../../../../../../enums/AccountType";
+import { solvingForecastSumsCalendarAndChartData } from "../../../../../../../common/compute";
+import { OriginalAmount } from "../../../../Sidebar/childs/ControlPanel/childs/OriginalAmount";
+
 // _fillCalendarMap - предподготавливает данные
 const _fillCalendarMap = (
     bonds: { [instrumentId: string]: Bond },
@@ -28,16 +32,50 @@ const _fillCalendarMap = (
     return result;
 };
 
+const CombineCouponCalendarWithSolveFunc = (
+    bonds: { [instrumentId: string]: Bond },
+    portfolio: { [instrumentId: number]: number },
+    iis: AccountType,
+    orgignalAmount: number,
+    funds: number,
+    period: number,
+    reinvestment: boolean
+): Array<CouponCalendarPayment> => {
+    let bondsSolve: Array<{ bond: Bond; quantity: number }> = [];
+
+    const {
+        sum,
+        porfit,
+        percent,
+        calendar,
+        barChartData,
+        pieChartData,
+    } = solvingForecastSumsCalendarAndChartData(
+        bonds,
+        portfolio,
+        orgignalAmount,
+        funds,
+        period,
+        iis === AccountType.INDIVIDUAL_INVESTMENT,
+        reinvestment
+    );
+
+    return calendar;
+};
+
 // CombineCouponCalendar собирает данные для календаря купонов
 const CombineCouponCalendar = (
     bonds: { [instrumentId: string]: Bond },
-    portfolio: { [instrumentId: number]: number }
-): Map<string, Array<CouponCalendarPayment>> => {
+    portfolio: { [instrumentId: number]: number },
+    iis: AccountType = AccountType.BROKER,
+    orgignalAmount: number = 0
+): Array<CouponCalendarPayment> => {
+    // Map<string, Array<CouponCalendarPayment>> => {
     let calendarMap = _fillCalendarMap(bonds, portfolio);
     let res: Map<string, Array<CouponCalendarPayment>> = new Map();
 
     if (calendarMap.size === 0) {
-        return res;
+        return [];
     }
 
     for (let [_iid, bondPayments] of calendarMap) {
@@ -61,27 +99,45 @@ const CombineCouponCalendar = (
 
             if (new Date(p.paymentDate) > startDate) cp.push(p);
         });
+
+        //ИИС
+        if (iis === AccountType.INDIVIDUAL_INVESTMENT) {
+            let year = startDate.getFullYear() + 1;
+            let endYear = year + 7;
+            while (year <= endYear) {
+                cp.push({
+                    instrumentId: "",
+                    issuerLogoUrl: "",
+                    paymentDate: `${year}-01-01`,
+                    issuerName: "ИИС",
+                    couponPaymentAmount: 0,
+                });
+                year++;
+            }
+        }
         res.set(_iid, cp);
     }
-    return res;
+
+    let result = JoinCouponPayments(res, orgignalAmount);
+
+    return result;
 };
 
 // _sortCouponPaymentsByDate - сортирует массив по дате
 const _sortCouponPaymentsByDate = (
     payments: Array<CouponCalendarPayment>
 ): Array<CouponCalendarPayment> => {
-    payments.sort((i, j) => {
+    return payments.sort((i, j) => {
         return ToTimestamp(i.paymentDate) - ToTimestamp(j.paymentDate);
     });
-
-    return payments;
 };
 
 // JoinCouponPayments объединяем нужные нам купонные выплаты для удобного рендера
 const JoinCouponPayments = (
-    calendarData: Map<string, Array<CouponCalendarPayment>>
+    calendarData: Map<string, Array<CouponCalendarPayment>>,
+    orgignalAmount: number = 0
 ): Array<CouponCalendarPayment> => {
-    let result = [];
+    let result: Array<CouponCalendarPayment> = [];
     calendarData.forEach((payments, instrumentId) => {
         payments.forEach((payment, i) => {
             result.push({
@@ -94,7 +150,22 @@ const JoinCouponPayments = (
         });
     });
 
-    return _sortCouponPaymentsByDate(result);
+    result = _sortCouponPaymentsByDate(result);
+
+    let yearSum: number = orgignalAmount;
+    result.forEach((res, i) => {
+        yearSum += res.couponPaymentAmount;
+        if (res.issuerName === "ИИС") {
+            res.couponPaymentAmount = Math.floor(yearSum * 0.13);
+            yearSum = 0;
+        }
+    });
+
+    return result;
 };
 
-export { CombineCouponCalendar, JoinCouponPayments };
+export {
+    CombineCouponCalendar,
+    JoinCouponPayments,
+    CombineCouponCalendarWithSolveFunc,
+};

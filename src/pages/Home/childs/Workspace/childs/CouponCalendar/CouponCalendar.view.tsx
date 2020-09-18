@@ -33,7 +33,7 @@ export const CouponCalendarView: React.FC<CouponCalendarProps> = (props) => {
                         </tr>
                     </thead>
                     <tbody>
-                        {JoinCouponPayments(calendarData).map((payment, i) => {
+                        {calendarData.map((payment, i) => {
                             return _renderTableRow(
                                 i,
                                 payment.paymentDate,

@@ -1,4 +1,9 @@
 import { CouponCalendarLine, Bond, BondPayment } from "./types";
+import { CouponCalendarPayment } from "../pages/Home/childs/Workspace/childs/CouponCalendar/CouponCalendar";
+import {
+    FindBondByInstrumentId,
+    FindBondAmountByInstrumentId,
+} from "../store/Portfolio/utils/Portfolio.utils";
 
 interface Item {
     arrayIdx: number;
@@ -14,14 +19,30 @@ function getMinValue(items: Item[]) {
     return items[minValueIdx];
 }
 
-function getFundDates(start: Date, end: Date): Array<Date> {
+function leftpad(
+    val: number,
+    resultLength: number = 2,
+    leftpadChar: string = "0"
+): string {
+    return (String(leftpadChar).repeat(resultLength) + String(val)).slice(
+        String(val).length
+    );
+}
+
+function dateToStr(date: Date): string {
+    return `${date.getFullYear()}-${leftpad(
+        date.getMonth() + 1
+    )}-${date.getDay()}`;
+}
+
+function getFundDates(start: Date, end: Date): Array<string> {
     let year = start.getFullYear();
     let month = start.getMonth();
 
     let endYear = end.getFullYear();
     let endMonth = end.getMonth();
 
-    let dates: Array<Date> = [];
+    let dates: Array<string> = [];
     while (year < endYear || (month < endMonth && year === endYear)) {
         let tempDate = new Date(year, month, 1);
         if (tempDate < start) {
@@ -29,16 +50,15 @@ function getFundDates(start: Date, end: Date): Array<Date> {
             if (month > 11) {
                 month = 0;
                 year++;
-            } 
-            continue;  
-        };
-        dates.push(tempDate);
+            }
+            continue;
+        }
+        dates.push(`${year}-${leftpad(month)}-01`);
         month++;
         if (month > 11) {
             month = 0;
             year++;
         }
-
     }
 
     return dates;
@@ -55,36 +75,69 @@ function setreinvest(quantitiesPrices, minPrice, freeMoney): number {
     return freeMoney;
 }
 
-function dateCoupons(coupons: BondPayment[], start: Date, end: Date):  BondPayment[] {
-    
+function dateCoupons(
+    coupons: BondPayment[],
+    start: Date,
+    end: Date
+): BondPayment[] {
     let result: BondPayment[] = [];
-    for (let i=0; i< coupons.length; i++) {
+    for (let i = 0; i < coupons.length; i++) {
         let coupon = coupons[i];
         let date = new Date(coupon.date.toString());
         if (date < start || date > end) continue;
-        result.push(new BondPayment(new Date(coupon.date.toString()), coupon.payment));
+        result.push(
+            new BondPayment(new Date(coupon.date.toString()), coupon.payment)
+        );
     }
     return result;
 }
 
+function getBonds(
+    bondsStore: { [instrumentId: string]: Bond },
+    portfolio: { [instrumentId: number]: number }
+): Array<{ bond: Bond; quantity: number }> {
+    let result: Array<{ bond: Bond; quantity: number }> = [];
+    Object.keys(bondsStore).forEach((i) => {
+        let quantity = FindBondAmountByInstrumentId(
+            portfolio,
+            bondsStore[i].instrumentId
+        );
+        if (quantity > 0) {
+            let bond = FindBondByInstrumentId(
+                bondsStore,
+                bondsStore[i].instrumentId
+            );
+            result.push({ bond: bond, quantity: quantity });
+        }
+    });
+
+    return result;
+}
 
 export function solvingForecastSumsCalendarAndChartData(
+    bondsStore: { [instrumentId: string]: Bond },
+    portfolio: { [instrumentId: number]: number },
     originalSum: number,
     funds: number,
     period: number,
-    bonds: Array<{ bond: Bond; quantity: number }>,
     iis: boolean,
     reinvestment: boolean
 ): {
     sum: number;
     porfit: number;
     percent: number;
-    calendar: Array<CouponCalendarLine>;
+    calendar: Array<CouponCalendarPayment>;
     barChartData: (string | Date | number)[][];
     pieChartData: (string | number)[][];
 } {
+    var bonds = getBonds(bondsStore, portfolio);
+
     const date = new Date();
-    const dateNow = new Date(date.getFullYear(), date.getMonth(), date.getDay());
+    const dateNow = new Date(
+        date.getFullYear(),
+        date.getMonth(),
+        date.getDay()
+    );
     const endDate = new Date(
         dateNow.getFullYear() + period,
         dateNow.getMonth(),
@@ -128,8 +181,7 @@ export function solvingForecastSumsCalendarAndChartData(
         return b.couponCost - a.couponCost;
     });
 
-
-    const couponCalendar: CouponCalendarLine[] = [];
+    const couponCalendar: CouponCalendarPayment[] = [];
     const elementIdxs = calendarArrays.map(() => 0);
 
     let prevYear: number = dateNow.getFullYear();
@@ -141,7 +193,7 @@ export function solvingForecastSumsCalendarAndChartData(
         for (let arrayIdx = 0; arrayIdx < calendarArrays.length; arrayIdx++) {
             const relevantArray = calendarArrays[arrayIdx];
             const elementIdx = elementIdxs[arrayIdx];
-            if (elementIdx === relevantArray.length) continue;            
+            if (elementIdx === relevantArray.length) continue;
             smallestItems.push({
                 arrayIdx,
                 calendarLine: relevantArray[elementIdx],
@@ -154,20 +206,27 @@ export function solvingForecastSumsCalendarAndChartData(
 
         if (iis && prevYear < nextItem.calendarLine.date.getFullYear()) {
             prevYear++;
-            couponCalendar.push(
-                new CouponCalendarLine(new Date(prevYear, 0, 1), "ИИС", 0)
-            );
+            couponCalendar.push({
+                instrumentId: "",
+                issuerLogoUrl: "",
+                paymentDate: `${prevYear}-01-01`,
+                issuerName: "ИИС",
+                couponPaymentAmount: 0,
+            });
             couponIndexes.push(nextItem.arrayIdx);
             console.log(new Date(prevYear, 0, 1));
         }
 
-        couponCalendar.push(
-            new CouponCalendarLine(
-                nextItem.calendarLine.date,
-                issuerNames[nextItem.arrayIdx],
-                nextItem.calendarLine.payment * bonds[nextItem.arrayIdx].quantity
-            )
-        );
+        let bond = bonds[nextItem.arrayIdx];
+        couponCalendar.push({
+            instrumentId: bond.bond.instrumentId,
+            issuerLogoUrl: bond.bond.issuerImg,
+            paymentDate: dateToStr(nextItem.calendarLine.date),
+            issuerName: bond.bond.name,
+            couponPaymentAmount:
+                nextItem.calendarLine.payment *
+                bonds[nextItem.arrayIdx].quantity,
+        });
         couponIndexes.push(nextItem.arrayIdx);
         elementIdxs[nextItem.arrayIdx]++;
     }
@@ -183,7 +242,7 @@ export function solvingForecastSumsCalendarAndChartData(
 
     let yearSum: number = originalSum;
 
-    var fundsDates: Array<Date> = [];
+    var fundsDates: Array<string> = [];
     if (funds > 0) {
         fundsDates = getFundDates(dateNow, endDate);
     }
@@ -193,14 +252,14 @@ export function solvingForecastSumsCalendarAndChartData(
         let calendarLine = couponCalendar[i];
         let quantitypriceLine = quantitiesPrices[couponIndexes[i]];
 
-        if (calendarLine.issuer === "ИИС") {
-            calendarLine.payment = Math.round(yearSum * 0.13);
+        if (calendarLine.issuerName === "ИИС") {
+            calendarLine.couponPaymentAmount = Math.round(yearSum * 0.13);
             yearSum = 0;
         }
 
         for (let j = fundsIndex; j < fundsDates.length; j++) {
             fundsIndex = j;
-            if (fundsDates[j] > calendarLine.date) break;
+            if (fundsDates[j] > calendarLine.paymentDate) break;
             sum += funds;
             yearSum += funds;
             freeMoney += funds;
@@ -210,9 +269,9 @@ export function solvingForecastSumsCalendarAndChartData(
             }
         }
 
-
-
-        let payment = Math.floor(quantitypriceLine.couponCost * quantitypriceLine.quantity);
+        let payment = Math.floor(
+            quantitypriceLine.couponCost * quantitypriceLine.quantity
+        );
         sum += payment;
         profit += payment;
         yearSum += payment;
@@ -222,12 +281,16 @@ export function solvingForecastSumsCalendarAndChartData(
             freeMoney = setreinvest(quantitiesPrices, minPrice, freeMoney);
         }
 
-        barChartData.push([calendarLine.date, portfolioSum, freeMoney]);
+        barChartData.push([
+            new Date(calendarLine.paymentDate),
+            portfolioSum,
+            freeMoney,
+        ]);
     }
 
-    for (let i=0; i< quantitiesPrices.length; i++){
+    for (let i = 0; i < quantitiesPrices.length; i++) {
         let element = quantitiesPrices[i];
-        pieChartData.push([issuerNames[i], element.price * element.quantity]);   
+        pieChartData.push([issuerNames[i], element.price * element.quantity]);
     }
 
     return {
