@@ -4,7 +4,7 @@ import React from "react";
 import { ToggleProps } from "./Toggle";
 
 export const ToggleView: React.FC<ToggleProps> = (props) => {
-	const {title, isChecked} = props;
+	const {checked} = props;
 
 	const {onChange} = props;
 
@@ -13,12 +13,10 @@ export const ToggleView: React.FC<ToggleProps> = (props) => {
 			<label className={styles.label}>
 				<input type="checkbox"
 					className={styles.input}
-					checked={isChecked}
+					checked={checked}
 					onChange={onChange} />
 				<div className={styles.toggle} />
-				<div className={styles.title}>{title}</div>
 			</label>
-			<div className={styles.info} />
 		</div>
 	);
 }

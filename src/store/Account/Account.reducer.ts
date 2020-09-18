@@ -3,12 +3,16 @@ import { Actions } from "./Account.actions.type";
 import { initState, State } from "./Account.state";
 
 export const account = (state = initState, action: Actions): State => {
-	switch(action.type) {
-		case Keys.SET_IS_INDIVIDUAL_INVESTMENT_ACCOUNT:
-			return {...state, isIndividualInvestmentAccount: action.isIndividualInvestmentAccount}
-		case Keys.SET_ORIGIN_AMOUNT:
-			return {...state, originAmount: action.originAmount}
-		default:
-			return state;
-	}
-}
+    switch (action.type) {
+        case Keys.SET_ACCOUNT_TYPE:
+            return { ...state, accountType: action.accountType };
+        case Keys.SET_ORIGIN_AMOUNT:
+            return { ...state, originalAmount: action.originalAmount };
+        case Keys.SET_DEPOSITING_FUNDS:
+            return { ...state, depositingFunds: action.depositingFunds };
+        case Keys.SET_FORECAST_PERIOD:
+            return { ...state, forecastPeriod: action.forecastPeriod };
+        default:
+            return state;
+    }
+};

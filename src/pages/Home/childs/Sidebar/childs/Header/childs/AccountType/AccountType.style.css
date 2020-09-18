@@ -1,0 +1,35 @@
+.container {
+	display: flex;
+	width: 140px;
+	height: 20px;
+	align-items: center;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	position: relative;
+}
+
+.container:after {
+	content: "";
+	width: 50%;
+	height: 18px;
+	background-color: rgba(0, 0, 0, 0.15);
+	border-radius: 2px;
+	position: absolute;
+	left: 1px;
+	transition: transform ease-in-out 100ms;
+}
+
+.container.broker:after {
+	transform: translateX(0);
+}
+
+.container.individual_investment:after {
+	transform: translateX(calc(100% - 2px));
+}
+
+.type {
+	width: 50%;
+	text-align: center;
+	font-size: 11px;
+	cursor: pointer;
+}

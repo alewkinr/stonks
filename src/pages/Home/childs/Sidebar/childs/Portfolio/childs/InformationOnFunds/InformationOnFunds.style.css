@@ -1,0 +1,50 @@
+.container {
+	display: flex;
+	border: 1px solid #fff;
+	box-sizing: border-box;
+	border-radius: 6px;
+	padding: 10px;
+	justify-content: space-around;
+	position: relative;
+}
+
+.available,
+.used {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.money {
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+}
+
+.money:after {
+	content: "";
+	width: 14px;
+	height: 14px;
+	background-image: url(./contents/ruble.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	margin-left: 5px;
+}
+
+.label {
+	text-align: center;
+	font-size: 12px;
+}
+
+.info {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 10px;
+	height: 10px;
+	background-image: url(./contents/info.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	cursor: pointer;
+}

@@ -1,22 +1,29 @@
 export enum Currency {
-    RUB = "RUB"
+    RUB = "RUB",
 }
 
 export class BondPayment {
-
-    constructor(
-        private readonly _date: Date,
-        private readonly _payment: number)
-    {
+    constructor(private _date: Date, private readonly _payment: number) {
         this._date = _date;
         this._payment = _payment;
+    }
+
+    get date(): Date {
+        return this._date;
+    }
+
+    get payment(): number {
+        return this._payment;
+    }
+
+    set date(date) {
+        this._date = date;
     }
 }
 
 export class Bond {
-
     constructor(
-        private readonly _instrumentId: string,   // ISIN / CUSIP
+        private readonly _instrumentId: string, // ISIN / CUSIP
         private readonly _shortName: string,
         private readonly _name: string,
         private readonly _issuer: string,
@@ -28,8 +35,9 @@ export class Bond {
         private readonly _couponAnnualPercent: number,
         private readonly _couponCost: number,
         private readonly _couponPeriod: number,
-        private readonly _couponCalendar: Array<BondPayment>)
-    {
+        private readonly _price: number,
+        private readonly _couponCalendar: Array<BondPayment>
+    ) {
         this._instrumentId = _instrumentId;
         this._shortName = _shortName;
         this._name = _name;
@@ -38,6 +46,7 @@ export class Bond {
         this._issuerImg = _issuerImg;
         this._maturityDate = _maturityDate;
         this._notional = _notional;
+        this._price = _price;
         this._currency = _currency;
         this._couponAnnualPercent = _couponAnnualPercent;
         this._couponCost = _couponCost;
@@ -53,11 +62,11 @@ export class Bond {
         return this._name;
     }
 
-    get issuer(): String {
+    get issuer(): string {
         return this._issuer;
     }
 
-    get issuerImg(): String {
+    get issuerImg(): string {
         return this._issuerImg;
     }
 
@@ -67,9 +76,9 @@ export class Bond {
 
     get notional(): string {
         let ccy;
-        switch(this._currency) {
+        switch (this._currency) {
             case Currency.RUB:
-                ccy = "₽"
+                ccy = "₽";
                 break;
             default:
                 throw "unknown currency";
@@ -78,7 +87,19 @@ export class Bond {
     }
 
     get couponAnnualPercent(): string {
-        return (this._couponAnnualPercent).toFixed(2);
+        return this._couponAnnualPercent.toFixed(2);
+    }
+
+    get couponCalendar(): Array<BondPayment> {
+        return this._couponCalendar;
+    }
+
+    get couponCost(): number {
+        return this._couponCost;
+    }
+
+    get price(): number {
+        return this._price;
     }
 
     static deserialize(input: any): Bond {
@@ -95,11 +116,38 @@ export class Bond {
             input.couponAnnualPercent,
             input.couponCost,
             input.couponPeriod,
-            input.couponCalendar
-                .map(x => new BondPayment(
-                    new Date(Date.parse(x.date)),
-                    x.payment)
-                )
+            input.price,
+            input.couponCalendar.map(
+                (x) => new BondPayment(new Date(Date.parse(x.date)), x.payment)
+            )
         );
+    }
+}
+
+export class CouponCalendarLine {
+    constructor(
+        private readonly _date: Date,
+        private readonly _issuer: string,
+        private _payment: number
+    ) {
+        this._date = _date;
+        this._issuer = _issuer;
+        this._payment = _payment;
+    }
+
+    get date(): Date {
+        return this._date;
+    }
+
+    get issuer(): string {
+        return this._issuer;
+    }
+
+    get payment(): number {
+        return this._payment;
+    }
+
+    set payment(payment) {
+        this._payment = payment;
     }
 }
