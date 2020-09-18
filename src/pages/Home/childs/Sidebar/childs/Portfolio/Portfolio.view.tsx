@@ -23,6 +23,7 @@ export const PortfolioView: React.FC<PortfolioProps> = (props) => {
             <div className={styles.containerRow}>
                 <div className={styles.label}>{"Состав портфеля"}</div>
             </div>
+
             {
                 /*
                     TODO: reoved till better time 
@@ -33,10 +34,10 @@ export const PortfolioView: React.FC<PortfolioProps> = (props) => {
                 <div className={styles.bonds}>
                     {
                         Object.keys(portfolio).map((instrumentId, i) => {
-                            let instrumentCount = portfolio[instrumentId];
-                            let bond = FindBondByInstrumentId(bonds, instrumentId);
+                            const instrumentCount = portfolio[instrumentId];
+                            const bond = FindBondByInstrumentId(bonds, instrumentId);
 
-                            let { issuer, issuerImg } = bond;
+                            const { issuer, issuerImg } = bond;
 
                             return (
                                 <Bond

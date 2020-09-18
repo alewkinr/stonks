@@ -1,3 +1,3 @@
-import { CouponCalendar } from "./CouponCalendar";
+import CouponCalendar from "./CouponCalendar";
 
 export { CouponCalendar };

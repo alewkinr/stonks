@@ -1,4 +1,5 @@
 import { Bond } from "../../../common/types";
+import { portfolio } from "../Portfolio.reducer";
 
 const _filterBondsByInstrumentId = (bonds, _id: string): Array<Bond> => {
   return bonds.filter(
@@ -34,7 +35,7 @@ const _hasBondIdAsKey = (bondsStoreObj: { [instrumentId: string]: any }, _id: st
 }
 
 // IsBondIncludedInPortfolio - проверяет что бонд есть в портфеле
-export const IsBondIncludedInPortfolio = (bonds: { [instrumentId: string]: any }, instrumentId: string): boolean => {
+export const IsBondIncludedInPortfolio = (bonds: { [instrumentId: string]: any }, instrumentId: ): boolean => {
   return _hasBondIdAsKey(bonds, instrumentId)
 }
 
@@ -54,3 +55,7 @@ export const CalculateBondsCost = (bond: Bond, amount: number): number => {
 
   return Number(bond.notional) * amount
 }
+
+export const FindBondAmountByInstrumentId = (portfolio: { [instrumentId: string]: number }, instrumentId: string): number => {
+  return portfolio[instrumentId];
+};
