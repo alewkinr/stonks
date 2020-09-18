@@ -6,6 +6,19 @@
     margin-top: 20px;
     box-sizing: border-box;
 }
+.title {
+    font-weight: bold;
+    padding: 20px 0 20px 0;
+}
+
+.container-header {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    justify-content: space-between;
+}
 
 .container-row {
     display: flex;
@@ -25,4 +38,5 @@
 
     font-size: 12px;
     color: var(--label-name-color);
+    
 }

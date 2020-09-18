@@ -3,7 +3,7 @@ export enum Currency {
 }
 
 export class BondPayment {
-    constructor(private readonly _date: Date, private readonly _payment: number) {
+    constructor(private _date: Date, private readonly _payment: number) {
         this._date = _date;
         this._payment = _payment;
     }
@@ -14,6 +14,10 @@ export class BondPayment {
 
     get payment(): number {
         return this._payment;
+    }
+
+    set date(date) {
+        this._date = date;
     }
 }
 

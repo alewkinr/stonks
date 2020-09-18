@@ -17,9 +17,9 @@ type PortfolioState = {
 };
 
 type PortfolioDispatch = {
-	setInstrumentNumberInPortfolio: typeof setInstrumentNumberInPortfolio,
-	incrementInstrumentAmountInPortfolio: typeof incrementInstrumentAmountInPortfolio,
-	decrementInstrumentAmountInPortfolio: typeof decrementInstrumentAmountInPortfolio,
+	setInstrumentNumberInPortfolio: typeof setInstrumentNumberInPortfolio;
+	incrementInstrumentAmountInPortfolio: typeof incrementInstrumentAmountInPortfolio;
+	decrementInstrumentAmountInPortfolio: typeof decrementInstrumentAmountInPortfolio;
 };
 
 export type PortfolioProps = PortfolioState & PortfolioDispatch;
@@ -29,7 +29,7 @@ const Portfolio: React.FC<PortfolioProps> = (props) => {
 }
 
 const mapStateToProps = (state: AppState): PortfolioState => {
-	let { bonds, portfolio, cost } = state.portfolio;
+	const { bonds, portfolio, cost } = state.portfolio;
 
 	return { bonds, portfolio, cost }
 }
