@@ -24,7 +24,7 @@ function convertToFormat(value: string): string {
  * @returns Числовое значение.
  */
 function normilize(value: string): number {
-	const MAX_LIMIT = 3500000;
+	const MAX_LIMIT = 2500000;
 	
 	if (!value) {
 		return 0;

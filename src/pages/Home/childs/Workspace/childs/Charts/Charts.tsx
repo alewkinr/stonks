@@ -34,7 +34,7 @@ const mapStateToProps = (state: AppState): ChartsState => {
 
     const {
         sum,
-        porfit,
+        profit: porfit,
         percent,
         calendar,
         barChartData,

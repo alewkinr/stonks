@@ -1,4 +1,4 @@
-import { CouponCalendarLine, Bond, BondPayment } from "./types";
+import { Bond, BondPayment } from "./types";
 import { CouponCalendarPayment } from "../pages/Home/childs/Workspace/childs/CouponCalendar/CouponCalendar";
 import {
     FindBondByInstrumentId,
@@ -118,6 +118,24 @@ function getBonds(
     return result;
 }
 
+export function getBondsSum(
+    bondsStore: { [instrumentId: string]: Bond },
+    portfolio: { [instrumentId: number]: number }
+): number {
+    var sum = 0;
+    let result: Array<{ bond: Bond; quantity: number }> = [];
+    Object.keys(bondsStore).forEach((i) => {
+        let quantity = FindBondAmountByInstrumentId(
+            portfolio,
+            bondsStore[i].instrumentId
+        );
+        if (quantity > 0) {
+            sum += Math.min(quantity, 100) * bondsStore[i].price;
+        }
+    });
+    return sum;
+}
+
 export function solvingForecastSumsCalendarAndChartData(
     bondsStore: { [instrumentId: string]: Bond },
     portfolio: { [instrumentId: number]: number },
@@ -128,7 +146,7 @@ export function solvingForecastSumsCalendarAndChartData(
     reinvestment: boolean
 ): {
     sum: number;
-    porfit: number;
+    profit: number;
     percent: number;
     calendar: Array<CouponCalendarPayment>;
     barChartData: (string | Date | number)[][];
@@ -211,8 +229,9 @@ export function solvingForecastSumsCalendarAndChartData(
         if (iis && prevYear < nextItem.calendarLine.date.getFullYear()) {
             prevYear++;
             couponCalendar.push({
-                instrumentId: "",
-                issuerLogoUrl: "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/bank_1f3e6.png",
+                instrumentId: `iis_${prevYear}`,
+                issuerLogoUrl:
+                    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/bank_1f3e6.png",
                 paymentDate: `${prevYear}-01-01`,
                 issuerName: "ИИС",
                 couponPaymentAmount: 0,
@@ -273,8 +292,6 @@ export function solvingForecastSumsCalendarAndChartData(
             }
         }
 
-        console.log(quantitiesPrices, quantitypriceLine);
-
         let payment = Math.floor(
             quantitypriceLine.couponCost * quantitypriceLine.quantity
         );
@@ -293,10 +310,7 @@ export function solvingForecastSumsCalendarAndChartData(
             sum - freeMoney,
             freeMoney,
         ]);
-        console.log(quantitiesPrices, quantitypriceLine);
     }
-
-    console.log(quantitiesPrices);
 
     for (let i = 0; i < quantitiesPrices.length; i++) {
         let element = quantitiesPrices[i];
@@ -308,7 +322,7 @@ export function solvingForecastSumsCalendarAndChartData(
 
     return {
         sum: sum,
-        porfit: profit,
+        profit: profit,
         percent: Math.round((profit * 100) / sum),
         calendar: couponCalendar,
         barChartData: barChartData,
