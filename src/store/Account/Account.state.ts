@@ -9,9 +9,9 @@ export type State = {
 };
 
 export const initState: State = {
-    accountType: AccountType.BROKER,
-    forecastPeriod: 1,
+    accountType: AccountType.INDIVIDUAL_INVESTMENT,
+    forecastPeriod: 3,
     originalAmount: "400000",
-    depositingFunds: "0",
-    reinvestment: false,
+    depositingFunds: "10000",
+    reinvestment: true,
 };

@@ -24,7 +24,7 @@ export const ChartsView: React.FC<ChartsProps> = (props) => {
                         changeChart(true);
                     }}
                 >
-                    {"Доходность"}
+                    {"Суммы"}
                 </div>
                 <div
                     className={`${styles.item} ${
