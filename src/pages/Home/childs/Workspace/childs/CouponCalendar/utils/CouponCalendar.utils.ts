@@ -75,7 +75,7 @@ const CombineCouponCalendar = (
             let endYear = year + 7;
             while (year <= endYear) {
                 cp.push({
-                    instrumentId: "",
+                    instrumentId: `iis_${year}`,
                     issuerLogoUrl: "",
                     paymentDate: `${year}-01-01`,
                     issuerName: "ИИС",
