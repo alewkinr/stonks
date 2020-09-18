@@ -8,7 +8,7 @@ import { convertToFormat } from "./handlers/ConvertToFormat";
 import { Slider } from "../../../../../../../../components/Slider";
 
 export const OriginalAmountView: React.FC<OriginalAmountProps> = (props) => {
-	const SLIDER_MAX = 4000000;
+	const SLIDER_MAX = 2500000;
 	const SLIDER_MIN = 100000;
 	const SLIDER_STEP = 300000;
 
