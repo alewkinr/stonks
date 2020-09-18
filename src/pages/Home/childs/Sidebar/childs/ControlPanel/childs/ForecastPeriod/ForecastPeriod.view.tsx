@@ -9,7 +9,6 @@ export const ForecastPeriodView: React.FC<ForecastPeriodProps> = (props) => {
     const SLIDER_MIN = 1;
     const SLIDER_STEP = 1;
 
-<<<<<<< HEAD
     const { forecastPeriod, setForecastPeriod } = props;
 
     return (
@@ -19,6 +18,7 @@ export const ForecastPeriodView: React.FC<ForecastPeriodProps> = (props) => {
             <Slider
                 marks
                 defaultValue={forecastPeriod}
+                value={forecastPeriod}
                 step={SLIDER_STEP}
                 min={SLIDER_MIN}
                 max={SLIDER_MAX}
@@ -27,18 +27,3 @@ export const ForecastPeriodView: React.FC<ForecastPeriodProps> = (props) => {
         </div>
     );
 };
-=======
-	return (
-		<div className={styles.container}>
-			<div className={styles.title}>{"Срок"}</div>
-			<div className={styles.value}>{`${forecastPeriod} год`}</div>
-			<Slider marks
-				value={forecastPeriod}
-				step={SLIDER_STEP}
-				min={SLIDER_MIN}
-				max={SLIDER_MAX}
-				onChange={(_, value: number) => setForecastPeriod(value)} />
-		</div>
-	);
-}
->>>>>>> 1eb09509d8928eaf546534c0ca550c168bccbdf2
