@@ -1,6 +1,6 @@
 import styles from "./ForecastPeriod.style.css";
 
-import React, { useState } from "react";
+import React from "react";
 import { ForecastPeriodProps } from "./ForecastPeriod";
 import { Slider } from "../../../../../../../../components/Slider";
 
@@ -16,6 +16,7 @@ export const ForecastPeriodView: React.FC<ForecastPeriodProps> = (props) => {
 			<div className={styles.title}>{"Срок"}</div>
 			<div className={styles.value}>{`${forecastPeriod} год`}</div>
 			<Slider marks
+				value={forecastPeriod}
 				step={SLIDER_STEP}
 				min={SLIDER_MIN}
 				max={SLIDER_MAX}
