@@ -211,8 +211,9 @@ export function solvingForecastSumsCalendarAndChartData(
         if (iis && prevYear < nextItem.calendarLine.date.getFullYear()) {
             prevYear++;
             couponCalendar.push({
-                instrumentId: "",
-                issuerLogoUrl: "",
+                instrumentId: `iis_${prevYear}`,
+                issuerLogoUrl:
+                    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/bank_1f3e6.png",
                 paymentDate: `${prevYear}-01-01`,
                 issuerName: "ИИС",
                 couponPaymentAmount: 0,
