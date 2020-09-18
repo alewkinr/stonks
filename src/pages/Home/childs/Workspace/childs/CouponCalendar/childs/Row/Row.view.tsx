@@ -8,11 +8,15 @@ export const RowView: React.FC<RowProps> = (props) => {
     return (
         <tr>
             <td className={styles.iconAndTitle}>
-                <img src={issuerLogoUrl} alt="row-icon" className={styles.image} />
+                <img src={issuerLogoUrl} alt="" className={styles.image} />
                 <div className={styles.name}>{bondName}</div>
             </td>
-            <td>{date}</td>
-            <td ><div className={styles.price}>{sum}</div></td>
+            <td>
+                <div className={styles.iconAndTitle}>{date}</div>
+            </td>
+            <td>
+                <div className={styles.price}>{sum}</div>
+            </td>
         </tr>
     );
 };
