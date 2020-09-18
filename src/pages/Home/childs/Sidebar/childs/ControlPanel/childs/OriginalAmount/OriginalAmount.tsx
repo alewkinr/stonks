@@ -21,11 +21,19 @@ const OriginalAmount: React.FC<OriginalAmountProps> = (props) => {
 };
 
 const mapStateToProps = (state: AppState): OriginalAmountState => {
-    const { originalAmount: originAmount } = state.account;
+    let { originalAmount: originAmount } = state.account;
     const { bonds, portfolio } = state.portfolio;
 
     const bondSum = getBondsSum(bonds, portfolio);
-    console.log(bondSum);
+
+    if (bondSum > Number(originAmount)) {
+        let norm_sum = 100000;
+        while (norm_sum < bondSum) norm_sum += 300000;
+        originAmount = norm_sum.toString();
+    }
+
+    console.log(bondSum, originAmount);
+
     return { originAmount, bondSum };
 };
 

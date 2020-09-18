@@ -130,7 +130,7 @@ export function getBondsSum(
             bondsStore[i].instrumentId
         );
         if (quantity > 0) {
-            sum += quantity * bondsStore[i].price;
+            sum += Math.min(quantity, 100) * bondsStore[i].price;
         }
     });
     return sum;
