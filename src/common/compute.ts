@@ -30,9 +30,9 @@ function leftpad(
 }
 
 function dateToStr(date: Date): string {
-    return `${date.getFullYear()}-${leftpad(
-        date.getMonth() + 1
-    )}-${date.getDay()}`;
+    return `${date.getFullYear()}-${leftpad(date.getMonth() + 1)}-${leftpad(
+        date.getDate()
+    )}`;
 }
 
 function getFundDates(start: Date, end: Date): Array<string> {
@@ -107,7 +107,7 @@ function getBonds(
                 bondsStore,
                 bondsStore[i].instrumentId
             );
-            result.push({ bond: bond, quantity: quantity });
+            result.push({ bond: bond, quantity: Math.min(quantity, 100) });
         }
     });
 
@@ -136,12 +136,12 @@ export function solvingForecastSumsCalendarAndChartData(
     const dateNow = new Date(
         date.getFullYear(),
         date.getMonth(),
-        date.getDay()
+        date.getDate()
     );
     const endDate = new Date(
         dateNow.getFullYear() + period,
         dateNow.getMonth(),
-        dateNow.getDay()
+        dateNow.getDate()
     );
 
     var portfolioSum: number = 0;
@@ -229,9 +229,11 @@ export function solvingForecastSumsCalendarAndChartData(
         });
         couponIndexes.push(nextItem.arrayIdx);
         elementIdxs[nextItem.arrayIdx]++;
+
+        console.log(nextItem.calendarLine.date);
     }
 
-    //console.log(couponCalendar);
+    console.log(couponCalendar);
 
     let barChartData: (string | Date | number)[][] = [];
     barChartData.push(["Дата", "Облигации", "Свободные средства"]);
@@ -254,6 +256,7 @@ export function solvingForecastSumsCalendarAndChartData(
 
         if (calendarLine.issuerName === "ИИС") {
             calendarLine.couponPaymentAmount = Math.round(yearSum * 0.13);
+            calendarLine.issuerName = "Начисление налогового вычета на ИИС";
             yearSum = 0;
         }
 
@@ -282,7 +285,7 @@ export function solvingForecastSumsCalendarAndChartData(
         }
 
         barChartData.push([
-            new Date(calendarLine.paymentDate),
+            new Date(calendarLine.paymentDate).toLocaleString().substr(0, 10),
             portfolioSum,
             freeMoney,
         ]);

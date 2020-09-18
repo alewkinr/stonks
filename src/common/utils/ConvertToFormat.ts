@@ -12,6 +12,8 @@ function convertToFormat(value: number, limit: number = 100): string {
     const normilizedValue = normilize(value.toString(), limit);
     const formatter = new Intl.NumberFormat("ru");
 
+    console.log(limit, normilizedValue);
+
     const format = formatter.format(normilizedValue);
 
     return format === "не число" ? "" : format;

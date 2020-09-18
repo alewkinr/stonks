@@ -18,9 +18,13 @@ export const BarChartView: React.FC<BarChartProps> = (props) => {
                 options={{
                     chart: {
                         title: "Сумма портфеля",
-                        bar: { groupWidth: "95%" },
                     },
-                    chartArea: { width: "80%" },
+                    hAxis: {
+                        gridlines: {
+                            interval: 5,
+                        },
+                    },
+
                     isStacked: true,
                     legend: { position: "top", maxLines: 5 },
                     colors: ["#3498db", "#34495e"],

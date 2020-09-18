@@ -9,7 +9,7 @@ const _renderTableRow = (key, date, bondName, issuerLogoUrl, sum) => {
     return (
         <Row
             key={key}
-            date={date}
+            date={new Date(date).toLocaleString().substr(0, 10)}
             bondName={bondName}
             sum={convertToFormat(sum, -1)}
             issuerLogoUrl={issuerLogoUrl}
