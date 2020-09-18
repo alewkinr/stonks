@@ -52,14 +52,14 @@ export const CalculateBondsCost = (bond: Bond, amount: number): number => {
     let res = 0;
 
     if (amount <= 0) {
-        return Number(bond.notional) * 1;
+        return Number(bond.price) * 1;
     }
 
     if (amount > MAX_AMOUNT_LIMIT) {
-        return Number(bond.notional) * MAX_AMOUNT_LIMIT;
+        return Number(bond.price) * MAX_AMOUNT_LIMIT;
     }
 
-    return Number(bond.notional) * amount;
+    return Number(bond.price) * amount;
 };
 
 export const FindBondAmountByInstrumentId = (
