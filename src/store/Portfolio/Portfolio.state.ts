@@ -23,7 +23,7 @@ bonds.forEach((bond: Bond) => {
 		...portfolio, ...{ [bond.instrumentId]: 0 }
 	}
 
-	cost.set(bond.instrumentId, Number(bond.notional))
+	cost.set(bond.instrumentId, Number(bond.price))
 });
 
 // Трансформируем данные в нужынй вид
