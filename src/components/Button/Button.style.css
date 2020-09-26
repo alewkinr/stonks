@@ -1,0 +1,37 @@
+:root {
+    --button-color-positive: #2ecc71;
+    --button-color-negative: #e74c3c;
+    --button-color-hover: #30be6b;
+}
+
+.container {
+    display: flex;
+}
+
+.button {
+    padding: 0px 20px;
+    align-items: center;
+    height: 34px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: filter 150ms ease-in-out;
+}
+
+.button.positive {
+    background-color: var(--button-color-positive);
+}
+
+.button.negative {
+    background-color: var(--button-color-negative);
+}
+
+.button:hover {
+    filter: brightness(98%);
+}
+
+.button:active {
+    box-shadow: inset 1px 1px 3px 1px #22222238;
+}

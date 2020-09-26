@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"jsx": "react",
+		"removeComments": true,
+		"alwaysStrict": true,
+		"esModuleInterop": true,
+		"module": "commonjs",
+		"target": "ES5",
+		"downlevelIteration": true,
+	},
+	"exclude": [
+		"node_modules"
+	],
+    "include": [
+		"src/**/*"
+    ]
+}
