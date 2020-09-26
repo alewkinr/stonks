@@ -9,8 +9,6 @@ package-lock.json
 # ESLint
 /.eslintcache
 
-# Project
-/public/
 
 # Created by https://www.toptal.com/developers/gitignore/api/webstorm,node,react,jetbrains
 # Edit at https://www.toptal.com/developers/gitignore?templates=webstorm,node,react,jetbrains
