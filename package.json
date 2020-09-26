@@ -53,8 +53,7 @@
     "prod": "webpack --mode production",
     "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx src",
     "eslint:dump": "eslint --print-config ./.eslintrc.json",
-    "predeploy": "npm run prod",
-    "publish": "gh-pages -d ./"
+    "deploy": "npm run prod && gh-pages -d ./public"
   },
   "author": "BKS3 Yandex.CTO Team",
   "license": "ISC",
